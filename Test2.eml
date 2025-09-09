@@ -1,0 +1,1951 @@
+Delivered-To: adhar.agnihotri@gmail.com
+Received: by 2002:a05:6200:4216:b0:5b6:98ed:2b4b with SMTP id h22csp1221452qnb;
+        Mon, 8 Sep 2025 07:59:28 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHFkwq5uRBUPEJQCi9M6/R/wtvUjkn6XuWUAeqgR7/2v4vfXrC7L7Bp+USKTWGVioL2wjWf
+X-Received: by 2002:a05:6808:148a:b0:438:25c0:355a with SMTP id 5614622812f47-43b29bed50cmr4234128b6e.14.1757343568664;
+        Mon, 08 Sep 2025 07:59:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1757343568; cv=none;
+        d=google.com; s=arc-20240605;
+        b=gmADfyotDAQZhjFpZYmni8JGz159nGKNVlK4HIkfenjzuTxv7Ab5Lq9p1cKl4tVMge
+         8SfXUlmcW3tnard/zQNjm7qExg5sBuUcGtm2aBnJxEIaW1hH97V9oujQhU2ckszkBZtk
+         kCqAnwssG5JM4zBun51rtEIh6KRDE4Ym3pjVLWjbGge71o4gvGC+6lUjELWFQqsLJ+La
+         FFrTM1HZPxpPOWYTL2/LI9p1HeAVgD12s7Vg4FqO5P8khr7iWZa/f/IeWy4hf8tjnyOO
+         ZWfDnhQnW+TOrY3Ck0DixwuwQXx/azRW0fHhePOcyTC/eJELEkx4SGkp6rjObHCWAm5B
+         37ig==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=date:to:from:subject:reply-to:feedback-id:mime-version:message-id
+         :list-unsubscribe-post:list-unsubscribe:dkim-signature;
+        bh=mkwYE3Zs7mY6PcYk6TqjpShy+CrU47irNFXn6XS3NVM=;
+        fh=mkjhgZGi5JEgz84TmScqSl9fhmaZOooChH8bIKYkkxg=;
+        b=RE0k+10EPRz90KFJMpktGRtpuOjme8Axt0vV/KzBysTYCYMbID1nghli0goUgSjH1X
+         37iSUdUM+GHRiIIIamHMf1QA977Ra3rhhs97pRuwH1gRErP2oCZ24t6y9TpLOUoM2UIc
+         fb15RdIK5+4pS5l0a7pgtGKlw95UAUhfXxEKRGH4pUzSIoLPf9UYX8rPkgRlI3r5ASrH
+         D7CwhdYTv1N8/Q+mX+FOHbUUGvCwcDktthK5r/XyOgYHgdxl8gjIvbjQnzBt9zMavyfp
+         WCoWxKMzrbOuHdK8DFz9tVr++iQEN8pwyh4iTlqBICjHlwjIYMY+NR6v/5UoB3V0tfiT
+         Tf2g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@email.nfl.com header.s=ep1 header.b=i8GIiHKb;
+       spf=pass (google.com: domain of bounce-hp2v60000019929d58f929ac2f56e96c65848030@email.nfl.com designates 93.191.147.77 as permitted sender) smtp.mailfrom=bounce-HP2v60000019929d58f929ac2f56e96c65848030@email.nfl.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=email.nfl.com
+Return-Path: <bounce-HP2v60000019929d58f929ac2f56e96c65848030@email.nfl.com>
+Received: from dmx1.bfi0.com (dmailer9314777.dmx1.bfi0.com. [93.191.147.77])
+        by mx.google.com with ESMTPS id 5614622812f47-43b48e01690si367987b6e.215.2025.09.08.07.59.28
+        for <adhar.agnihotri@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 08 Sep 2025 07:59:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-hp2v60000019929d58f929ac2f56e96c65848030@email.nfl.com designates 93.191.147.77 as permitted sender) client-ip=93.191.147.77;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.nfl.com header.s=ep1 header.b=i8GIiHKb;
+       spf=pass (google.com: domain of bounce-hp2v60000019929d58f929ac2f56e96c65848030@email.nfl.com designates 93.191.147.77 as permitted sender) smtp.mailfrom=bounce-HP2v60000019929d58f929ac2f56e96c65848030@email.nfl.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=email.nfl.com
+Return-Path: <bounce-HP2v60000019929d58f929ac2f56e96c65848030@email.nfl.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=email.nfl.com;
+	s=ep1; t=1757343486;
+	bh=mkwYE3Zs7mY6PcYk6TqjpShy+CrU47irNFXn6XS3NVM=;
+	h=List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Subject:From:
+	 To:Date:Content-Type;
+	b=i8GIiHKbHb1RZ+9MVZ4DY6D/fFn/mo9S2IPNhggSPwsB9NhUduBvPVjfU+j1GanQY
+	 9RNW68t01sM8t1asQfayExZzlqC94p/Baz3h/I3+ZP7STshObbegbw9wxhlQhokO6Q
+	 KGWZ9gNSER+NbHmL1YuqcpYq7OZEEbpRtGmrtInM=
+Received: from [10.233.19.185] ([10.233.19.185:49592])
+	by pc1udsmtn1n17 (envelope-from <bounce-HP2v60000019929d58f929ac2f56e96c65848030@email.nfl.com>)
+	(ecelerity 3.6.9.48312 r(Core:3.6.9.0)) with ECSTREAM
+	id 6B/42-14426-EFEEEB86; Mon, 08 Sep 2025 14:58:06 +0000
+List-Unsubscribe: <mailto:bounce-HP2v60000019929d58f929ac2f56e96c65848030@email.nfl.com?subject=list-unsubscribe>,<https://email.nfl.com/U2/v60000019929d58f929ac2f56e96c65848/1404144861d44cef000001c1c0b84425>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Message-ID: <HP2v60000019929d58f929ac2f56e96c65848030@email.nfl.com>
+MIME-Version: 1.0
+Feedback-ID: 14041448-61d4-4cef-8138-e2ec7584f57e:5a7f7595-026a-44a7-afff-8406438cab61:email:epslh1
+X-NSS: 14041448-61d4-4cef-8138-e2ec7584f57e
+Reply-To: "replyto@email.nfl.com"
+ <replyto-HP2v60000019929d58f929ac2f56e96c65848030@email.nfl.com>
+Subject: Bills Prevail Against Ravens in Instant Classic on 'SNF'!
+From: NFL Daily  <NFL@email.nfl.com>
+To: adhar.agnihotri@gmail.com
+Date: Mon, 8 Sep 2025 14:58:06 +0000
+Content-Type: multipart/alternative;
+ boundary="-=Part.31f19b3.4fd2fc3110e3be2d.19929d5908e.fb000a8459840c2=-"
+
+---=Part.31f19b3.4fd2fc3110e3be2d.19929d5908e.fb000a8459840c2=-
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1=2E0 Transitional//EN" "http://w=
+ww=2Ew3=2Eorg/TR/xhtml1/DTD/xhtml1-transitional=2Edtd">
+<html xmlns=3D"http://www=2Ew3=2Eorg/1999/xhtml"
+xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" lang=3D"en">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" /=
+>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial scale=3D1=
+=2E0" />
+<meta name=3D"robots" content=3D"no index" />
+<meta name=3D"format-detection" content=3D"telephone=3Dno" />
+<meta name=3D"format-detection" content=3D"address=3Dno" />
+
+<!--[if !mso]><!-->
+
+<style type=3D"text/css">
+    @font-face {
+      font-family: All-ProSans--light;
+      src: url('https://static=2Ewww=2Enfl=2Ecom/raw/upload/league/fonts/N=
+FL/All-ProSans/All-ProSans--light=2Ewoff2') format('woff2');
+      font-style: normal;
+      font-weight: 400;
+    }
+   =20
+    @font-face {
+      font-family: All-ProSans--regular;
+      src: url('https://static=2Ewww=2Enfl=2Ecom/raw/upload/league/fonts/N=
+FL/All-ProSans/All-ProSans--regular=2Ewoff2') format('woff2');
+      font-style: normal;
+      font-weight: 400;
+    }
+   =20
+    @font-face {
+      font-family: All-ProSans--medium;
+      src: url('https://static=2Ewww=2Enfl=2Ecom/raw/upload/league/fonts/N=
+FL/All-ProSans/All-ProSans--medium=2Ewoff2') format('woff2');
+      font-style: normal;
+      font-weight: 400;
+    }
+   =20
+    @font-face {
+      font-family: All-ProSans--bold;
+      src: url('https://static=2Ewww=2Enfl=2Ecom/raw/upload/league/fonts/N=
+FL/All-ProSans/All-ProSans--bold=2Ewoff2') format('woff2');
+      font-style: bold;
+      font-weight: 700;
+    }
+   =20
+    @font-face {
+      font-family: AllProDisplayA-SemiBold;
+      src: url('https://shp=2Ecsharmony=2Eepsilon=2Ecom/Pages/Content/font=
+s/5086/AllProDisplayA-SemiBold=2Ewoff2') format('woff2');
+      font-style: normal;
+      font-weight: 700;
+    }
+    </style>
+<!--<![endif]-->
+
+<title>NFL</title>
+<style type=3D"text/css">
+=2EReadMsgBody {
+    width: 100%;
+}
+=2EExternalClass {
+    width: 100%;
+}
+=2EExternalClass, =2EExternalClass p, =2EExternalClass span, =2EExternalCl=
+ass font, =2EExternalClass td, =2EExternalClass div {
+    line-height: 100%;
+}
+body {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    margin: 0 auto !important;
+    padding: 0;
+    min-width: 100% !important;
+}
+td {
+    mso-line-height-rule: exactly;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+}
+img {
+    margin: 0 !important;
+}
+/* Forces Outlook to honor line-height */
+div, p, a, li, td, span {
+    -webkit-text-size-adjust: none;
+}
+/* Hides preheader on Outlook */
+=2Eset_outlook_hidden {
+    display: none !important;
+}
+/* Overrides blue links */
+a[href^=3Dtel], #MessageViewBody a, a[x-apple-data-detectors], #body a, =
+=2Elink {
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+/* Wraps bullet proof button */
+a=2Ebutton {
+    border-left: 0px !important;
+    border-right: 0px !important;
+    display: block !important;
+    width: 100% !important;
+}
+[data-outlook-cycle] [x-apple-data-detectors-type=3D"calendar-event"] {
+    color: inherit !important;
+    -webkit-text-decoration-color: inherit !important;
+    text-decoration: none !important;
+}
+/*Stops Outlook iOS blue dates*/
+#body [x-apple-data-detectors=3Dtrue],
+a[x-apple-data-detectors=3Dtrue] {
+    color: inherit !important;
+    -webkit-text-decoration-color: inherit !important;
+    text-decoration: inherit !important;
+}
+/* Default superscript code */
+sup {
+    -webkit-text-size-adjust: none;
+    vertical-align: text-top =2E6em;
+    line-height: =2E6em;
+    font-size: 60%;
+}
+/* Default subscript code */
+sub {
+    -webkit-text-size-adjust: none;
+    vertical-align: text-bottom =2E9em;
+    line-height: =2E9em;
+    font-size: 60%;
+}
+=2Eyshortcuts a {
+    border-bottom: none !important;
+}
+/* Renders TH on yahoo */
+=2Eundoreset th {
+    padding: 1px !important;
+}
+/* Extra classes */
+=2Enowrap {
+    white-space: nowrap !important;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+
+/* STYLES FOR ROUNDED BORDER BUTTONS */
+@media screen and (max-device-width: 600px), screen and (max-width: 600px)=
+ {
+  =2Ewrapto100pc {
+      width: 100% !important;
+      height: auto !important;
+  }
+  =2Enomob_rounded {
+      display: none !important;
+      width: 0px !important;
+      height: 0px !important;
+  }
+}
+u + #body a {
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+u + #body =2Enomob_rounded {
+    display: none!important;
+    width: 0px!important;
+    height: 0px!important;
+}
+u + #body =2Egmailbutton {
+    width: 100% !important;
+}
+
+/* STYLES FOR RESPONSIVE */
+@media only screen and (max-width: 480px) {
+  /* SHOW ON RESPONSIVE */
+  =2Emobile_show {
+      display: block !important;
+      width: auto !important;
+      overflow: visible !important;
+      float: none !important;
+      max-height: none !important;
+      line-height: normal !important;
+      height: auto !important;
+  }
+  /* HIDE ON RESPONSIVE */
+  =2Enomob, =2Ehide {
+      display: none !important;
+  }
+  /* RESPONSIVE BACKGROUND IMAGE */
+  =2EbgAdjust {
+      background-position: top center;
+  }
+  =2Ehide_bgimage {
+      background-image: none !important;
+      height: auto !important;
+      width: 100% !important;
+  }
+  /* ALIGNS OBJECTS ON RESPONSIVE */
+  =2Ecenter {
+      text-align: center !important;
+  }
+  =2Eleft {
+      text-align: left !important;
+  }
+  =2Eright {
+      text-align: right !important;
+  }
+  /* ALIGN BLOCK ELEMENTS ON RESPONSIVE */
+  =2Emargin0 {
+      margin: 0 auto !important;
+  }
+  =2Emargin-left {
+      margin-right: auto;
+      margin-left: 0;
+  }
+  =2Emargin-right {
+      margin-right: 0;
+      margin-left: auto;
+  }
+  /* WRAP & RESIZE ON RESPONSIVE */
+  =2Ewrap {
+      width: 100% !important;
+      height: auto !important;
+      min-width: 100% !important;
+  }
+  =2Ewrap-existing-content {
+      height: auto !important;
+      display: block;
+  }
+  =2Eresize280 {
+      width: 280px !important;
+      height: auto !important;
+  }
+  /* SPLIT COLUMNS ON RESPONSIVE */
+  =2Ecolsplit {
+      width: 100% !important;
+      float: inherit !important;
+      display: block !important;
+      background-position: top center !important;
+  }
+  /* STACK IMAGE TOP OR BOTTOM ON RESPONSIVE */
+  th=2Etopstack {
+      display: table-header-group !important;
+  }
+  th=2Ebotstack {
+      display: table-footer-group !important;
+  }
+  /* Inlines objects on responsive */
+  =2Einline {
+      display: inline-block !important;
+  }
+  /* RESPONSIVE PADDING STYLES - 0 or 20 */
+  =2Epad0 {
+      padding: 0px !important;
+  }
+  =2Epad0t {
+      padding-top: 0px !important;
+  }
+  =2Epad0r {
+      padding-right: 0px !important;
+  }
+  =2Epad0b {
+      padding-bottom: 0px !important;
+  }
+  =2Epad0l {
+      padding-left: 0px !important;
+  }
+  =2Epad0rl {
+      padding-right: 0px !important;
+      padding-left: 0px !important;
+  }
+  =2Epad0tb {
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
+  }
+  =2Epad20 {
+      padding: 20px !important;
+  }
+  =2Epad20t {
+      padding-top: 20px !important;
+  }
+  =2Epad20r {
+      padding-right: 20px !important;
+  }
+  =2Epad20b {
+      padding-bottom: 20px !important;
+  }
+  =2Epad20l {
+      padding-left: 20px !important;
+  }
+  =2Epad20rl {
+      padding-right: 20px !important;
+      padding-left: 20px !important;
+  }
+  =2Epad20tb {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+  }
+}
+
+/* REMOVES RIGHT GUTTER IN GMAIL IOS APP */
+@media only screen and (min-device-width: 320px) and (max-device-width: 37=
+4px) {
+  /* iPhone 5 and 5S */
+  =2Eemail-container {
+      min-width: 320px !important;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 41=
+3px) {
+/* iPhone 6 and 6+ */
+  =2Eemail-container {
+      min-width: 375px !important;
+  }
+}
+
+/* STYLES FOR RESPONSIVE FONT SIZES */
+
+@media only screen and (max-width: 480px) {
+    /* Responsive Font Styles */
+@media only screen and (max-width: 480px) {
+    td =2Emobile_h1, td =2Emobile_h1 span {
+    font-size: 40px !important;
+    line-height: 120% !important;
+    }
+    td =2Emobile_h2, td =2Emobile_h2 span {
+    font-size: 32px !important;
+    line-height: 120% !important;
+    }
+    td =2Emobile_h3, td =2Emobile_h3 span {
+    font-size: 24px !important;
+    line-height: 120% !important;
+    }
+    td =2Emobile_h4, td =2Emobile_h4 span {
+    font-size: 24px !important;
+    line-height: 120% !important;
+    }
+    td =2Emobile_p1, td =2Emobile_p1 span {
+    font-size: 16px !important;
+    line-height: 150% !important;
+    }
+    td =2Emobile_p2, td =2Emobile_p2 span {
+    font-size: 14px !important;
+    line-height: 150% !important;
+    }
+    td =2Emobile_p3, td =2Emobile_p3 span {
+    font-size: 12px !important;
+    line-height: 150% !important;
+    }
+    td =2Emobile_cta, td =2Emobile_cta span {
+    font-size: 16px !important;
+    line-height: 150% !important;
+    }
+}
+}
+
+@media only screen and (max-width:480px) {
+    [data-personalization_mapping] {
+    position: relative;
+}
+[data-personalization_mapping] =2Epersonalization-placeholder-value, [data=
+-personalization_mapping] =2Epersonalization-placeholder-value * {
+    color: inherit;
+    font-weight: inherit;
+    background-color: rgba(56, 240, 115, 0=2E14902);
+}
+[data-personalization_mapping] =2Epersonalization-script-value, [data-pers=
+onalization_mapping] =2Epersonalization-styling-el {
+    display: none;
+}
+[data-personalization_mapping] =2Epersonalization-tooltip-el {
+    display: none;
+    width: max-content;
+    position: absolute;
+    left: 10%;
+    top: 100%;
+    z-index: 10000;
+    padding: 8px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 8px 0 rgba(122, 133, 148, 0=2E3);
+}
+[data-personalization_mapping] =2Epersonalization-tooltip-el =2Epersonaliz=
+ation-tooltip-el-row {
+    font-size: 12px;
+    display: block;
+    padding-bottom: 8px;
+    clear: both;
+    line-height: 18px;
+}
+[data-personalization_mapping] =2Epersonalization-tooltip-el =2Epersonaliz=
+ation-tooltip-el-row =2Epersonalization-tooltip-label {
+    color: #7a8594;
+    display: inline;
+    float: left;
+    font-size: 12px !important;
+    line-height: 18px !important;
+}
+[data-personalization_mapping] =2Epersonalization-tooltip-el =2Epersonaliz=
+ation-tooltip-el-row =2Epersonalization-tooltip-friendly-name, [data-person=
+alization_mapping] =2Epersonalization-tooltip-el =2Epersonalization-tooltip=
+-el-row =2Epersonalization-tooltip-default-value {
+    font-weight: 600;
+    color: #333;
+    display: inline;
+    float: left;
+    font-size: 12px !important;
+    line-height: 18px !important;
+}
+[data-personalization_mapping]:hover =2Epersonalization-tooltip-el {
+    display: inherit;
+}
+}
+</style>
+<!--[if mso | ie]>
+<style>
+=2Esup {
+  vertical-align: 1px !important;
+  font-size: 100% !important;
+}
+</style>
+<![endif]-->
+
+<!--[if ie]>
+<style>
+  =2Esup {
+    vertical-align: 5px !important;
+    font-size: 77% !important;
+  }
+</style>
+<![endif]-->
+
+<!--[if gt mso 15]>
+<style type=3D"text/css" media=3D"all">
+  /* Outlook 2016 Height Fix */
+  =2Eemail-container table,=20
+  =2Eemail-container tr,=20
+   =2Eemail-container th,=20
+   =2Eemail-container td {
+       border-collapse: collapse;
+}
+  =2Eemail-container tr {=20
+     font-size:0px;=20
+     line-height:0px;=20
+     border-collapse: collapse;=20
+}
+th, td {font-size: 16px;}
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+<style id=3D'tinyMceFallBack'>=2Emce-offscreen-selection { display:none; }=
+</style>
+</head>
+<body id=3D"body"  background=3D"" style=3D"margin:0 !important; padding:0=
+ !important; width: 100% !important; background-color: #CCCCCC; background-=
+size: auto; background-repeat: repeat; " class=3D"body">
+
+	<!--START -- Hidden Preheader -->
+		<!--[if !mso 9]><!-->
+		<div style=3D"display: none !important; font-size: 1px; color: #CCCCCC; =
+line-height: 1px; font-family: Arial,Helvetica,sans-serif; max-height: 0px;=
+ max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;">Here is the =
+top news from the NFL for Monday, 09/08/2025&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+		&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;
+		&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;
+		&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;
+		&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;
+		&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;
+		&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;
+		&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;
+		&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;</div>
+		<!--<![endif]-->
+		<!--END -- Hidden Preheader -->
+
+   =20
+
+   <!--START -- Page Overflow Color Table -->
+<div style=3D"background-color: #CCCCCC;">
+
+<!--[if gte mso 9]>
+	<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+	<v:fill type=3D"tile" src=3D"" color=3D"#CCCCCC"/>
+	</v:background>
+	<![endif]-->
+
+    <table role=3D"presentation" height=3D"100%" width=3D"100%" cellpaddin=
+g=3D"0"  cellspacing=3D"0" border=3D"0" align=3D"center" class=3D"email-con=
+tainer">
+        <tr>
+            <td align=3D"left" background=3D"" style=3D"vertical-align: to=
+p; background-size: auto; background-repeat: repeat;" valign=3D"top">
+
+				<!--START -- Email Background Color Table  -->
+
+                <table role=3D"presentation" width=3D"640" border=3D"0" al=
+ign=3D"center" cellpadding=3D"0" cellspacing=3D"0"  class=3D"wrap">
+                    <tr>
+						<td align=3D"center" data-wrapper>
+
+					    	<!--START Email Size Wrapper Table -->
+
+                            <table role=3D"presentation" width=3D"100%" bo=
+rder=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"wr=
+ap"><tbody><tr><td align=3D"center" style=3D"font-size:14px">
+<table width=3D"1" height=3D"1" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0">
+  <tr><td style=3D"font-size:0px; line-height:0px;">
+<img src=3D"https://mi=2Enfl=2Ecom/p/up/dd86ec383ba42cd3/o=2Egif?mi_u=3Dd2=
+225b433129ef8b96e6864a5c724177db71bfd73fcd6ab71dde415608d83f35&mi_ecmp=3D1:=
+1_NFL_Daily_Newsletter" width=3D"1" height=3D"1" alt=3D"" aria-hidden=3D"tr=
+ue" />
+  </td></tr>
+</table>
+<img src=3D'https://email=2Enfl=2Ecom/O/v60000019929d58f929ac2f56e96c65848=
+/1404144861d44cef00004c5a42963aa1' style=3D"display:none; max-height: 0px; =
+font-size: 0px; overflow: hidden; mso-hide: all"/></td></tr><tr><td><table =
+role=3D"presentation" bgcolor=3D"#CCCCCC" width=3D"640" border=3D"0" align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"wrap"><tbody><tr><=
+td bgcolor=3D"#ffffff"><!-- Start 1-011: Scaled Image -->
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcc2/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVb=
+KLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwAL=
+GfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALr=
+eTHlAhLBxZ9_DV3Pv3RTMsCYCXOhNRtkQg_ibFCFnM25XVWkpIoG1HsdFbzXu33xoiQ1GY3TOUl=
+zO5yMsNivwcjU_UFErw75Q8jNlip9gk8av-wNo1lJXfG1cQXDy1LcDxSDMhVkLNae5TrvbMMxzq=
+-GCGkkw-8lnVAz2zhKPdHEIcbnRs4BDlitBxEorY95k1-rVLmVl5DC6ncvpC5ssLVnvEb-Bi-VX=
+3G9BLi34Z2l52by-nXERnaFjZ3iaNDRMchlLzH5QIWHC5TKkIkV2jWu4ze7xi7Zv_cjCLCjY_6m=
+1DkvfU4Wbpj8yjgCWiHkjxnW3CO9rYIZELOCsLr_-lNFmrG5HX5Iz3_yQLdg9Z-QSoL_bvffTN2=
+cBUnZBWiOU1pyXGKXmOB5XEsDprNxmPL_8S89a0z3FzcfoohF8UlbX_yATXcIXJrd0NqWXewotu=
+HSTQqaPDeB_NEwv0qzDb3agKNPUJhp1Dp5afJgR8KwrTVwgdK4z-IRBiy4dpqOnHn6lELmwtC-_=
+8ofYdOsxntnKFJlCYBq6F0tTspBINVBWE9qGFR4dvCxgg90MWSuE-VUeBMU-15vn-0=3D" data=
+-managed-link=3D"scaled_link_url" target=3D"_blank" data-link-id=3D"fda718a=
+0f61411ef90773be2f0523b56"><img agilecontent=3D"true" src=3D"https://mi=2En=
+fl=2Ecom/p/rp/0f81f67d47ee2d69=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c72417=
+7db71bfd73fcd6ab71dde415608d83f35&amp;mi_ecmp=3D1:1_NFL_Daily_Newsletter&am=
+p;mi_date=3D09-08-25&amp;mi_firstname=3DAdhar&amp;mi_favteam=3D" alt=3D"" w=
+idth=3D"640" height=3D"auto" style=3D"display: block; vertical-align: top; =
+border-radius: 0px" border=3D"0" class=3D"wrap"></a></td> </tr> </tbody></t=
+able> </td> </tr> </tbody></table> </div> </section> <!-- End 1-011: Scaled=
+ Image --> </td></tr></tbody></table></td></tr><tr><td><table role=3D"prese=
+ntation" bgcolor=3D"#CCCCCC" width=3D"640" border=3D"0" align=3D"center" ce=
+llpadding=3D"0" cellspacing=3D"0" class=3D"wrap"><tbody><tr><td bgcolor=3D"=
+#ffffff"><!-- Start 1-011: Scaled Image -->
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcc3/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4OeU5Yt0eCHy03sd=
+dBJFo6RKjJK7tUW3k3q1TRzdOBnVoG3VAQTFdQ0WBfdAzVgn0JacjoeIBMgDqPfZIbrt9_NpL5X=
+eUO3iC-nwH4jTWxZUdd7H2q0ijTGl0CojWFK373hnsow5ShggqDsHGDdpbLWztKdCLkt0pOFFnW=
+R_RfyiLXCpjIRMtj_1y53thEsGZ0WbQUGHb0lcWeFTpFfqUgXDWXPE9UmB9jcGB5mAh5NAxyVIm=
+kYLYbhEEpNeDYa3deL3LA1f9fdly4dCrDF6AjA_VMVkcMxHPEsbEqIIEyv3S0_q7F9v5a99Ww1a=
+PuTQLjrRVMNVLlxay9iMB-xL-7xAO-1_5Rr3zY31O4J9gTN9S1dLNQ8f01ZfX9nqxcr0BnohGY9=
+6b4Yw0EuFM9Uo7iZqaNCAURKOKUKgFROBpaOSEJRMY51o-9HJxadST3tOHNYxXXEGtP9z5YRqTj=
+0IYzZFCvAz02nHZPhtwFEa0AGjIiZPhLfb8=3D" data-managed-link=3D"scaled_link_ur=
+l" target=3D"_blank" data-link-id=3D"18717f10370911f09c2103d409be6f94"><img=
+ agilecontent=3D"true" src=3D"https://images=2Eharmony=2Eepsilon=2Ecom/Cont=
+entHandler/images?id=3D43a76d5b-2b4c-4c85-839c-1b697648ff43" alt=3D"Rewatch=
+ every Week 1 game with NFL+ Premium!" width=3D"640" height=3D"auto" style=
+=3D"display: block; vertical-align: top; border-radius: 0px" border=3D"0" c=
+lass=3D"wrap"></a></td> </tr> </tbody></table> </td> </tr> </tbody></table>=
+ </div> </section> <!-- End 1-011: Scaled Image --> </td></tr><tr><td bgcol=
+or=3D"#031E3F"><!-- Start 1-004: Headline | H1 --><section id=3D"1004_h1" l=
+ayout-row=3D"true"><div layout-row=3D"true"><table layout-row=3D"true" role=
+=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" bgcolor=3D"#031E3F"> <tbody><tr layout-row=3D"true"> <td valign=3D"t=
+op" align=3D"left"> <table role=3D"presentation" width=3D"100%" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" class=3D"wrap"> <tbody><tr> <td align=
+=3D"center" style=3D"padding: 20px 30px 20px 30px" class=3D"pad20rl match">=
+<h1 style=3D"font-size: 14px; mso-line-height-rule: exactly; line-height: 1=
+20%; margin: 0px; font-weight: 700; letter-spacing: 0px; text-transform: no=
+ne; color: #000001; font-family: 'All-ProSans--bold', Arial, sans-serif" en=
+able-personalization=3D"true" data-richtext=3D"h1_text" data-groupid=3D"h1"=
+ class=3D"mobile_h2"><a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58=
+f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcc4/14041448-61d4-4cef-813=
+8-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjH=
+MDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4OeU5Yt0eCHy03sddBJFo6RKjJK=
+7tUW3k3q1TRzdOBnVoG3VAQTFdQ0WBfdAzVgn0JacjoeIBMgDqPfZIbrt9_NpL5XeUO3iC-nwH4=
+jTWxZUdd7H2q0ijTGl0CojWFK373hnsow5ShggqDsHGDdpbLWztKdCLkt0pOFFnWR_RfyiLXCpj=
+IRMtj_1y53thEsGZ0WbQUGHb0lcWeFTpFfqUgXDWXPE9UmB9jcGB5mAh5NAxyVImkYLYbhEEpNe=
+DYa3deL3LA1f9fdly4dCrDF6AjA_VMVkcMxHPEsbEqIIEyv3S0_q7F9v5a99Ww1aPuTQLjrRVMN=
+VLlxay9iMB-xL-7xAO-1_5Rr3zY31O4J9gTN9S1dLNQ8f01ZfX9nqxcr0BnohGY96b4Yw0EuFM9=
+Uo7iZqaNCAURKOKUKgFROBpaOSEJRMY51o8JDTp6EQyYro92YFSUrI9tMsRQ5dr1zmf9Oucn3hw=
+ZpaZTF1lEd04LGjIiZPhLfb8=3D" target=3D"_blank" rel=3D"noopener" style=3D"co=
+lor: rgb(0, 0, 1); font-weight: inherit; background: none; text-decoration:=
+ none;" data-link-id=3D"17c3e2808c9311f09ed1eb2b5b3f6427"><span style=3D"fo=
+nt-size: 36px; line-height: 120%; color: rgb(255, 255, 255);">Rewatch every=
+ Week 1 game with NFL+ Premium!</span></a></h1> </td> </tr> </tbody></table=
+> </td> </tr> </tbody></table> </div> </section> <!-- End 1-004: Headline |=
+ H1 --> </td></tr><tr><td bgcolor=3D"#031E3F"><!-- start 1-016: CTA --><sec=
+tion id=3D"1016_cta" layout-row=3D"true"><div layout-row=3D"true"><table la=
+yout-row=3D"true" role=3D"presentation" width=3D"100%" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" bgcolor=3D"#031E3F"> <tbody><tr layout-row=3D"=
+true"> <td valign=3D"top" align=3D"left"> <table role=3D"presentation" widt=
+h=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"wrap">=
+ <tbody><tr> <td align=3D"left" valign=3D"top"> <!-- Start CTA Table --> <t=
+able role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0"> <tbody><tr> <td align=3D"center" valign=3D"top" style=3D"p=
+adding: 0px 0px 30px 0px" class=3D"pad20rl"> <!-- Start CTA Block -->  <!--=
+ Start Image CTA --> <table role=3D"presentation" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" class=3D"wrap"> <tbody><tr> <td align=3D"center" v=
+align=3D"top"><a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2=
+f56e96c65848/1404144861d44cef0000021ef3a0bcc5/14041448-61d4-4cef-8138-e2ec7=
+584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMS=
+h3tviDHXIoXcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4OeU5Yt0eCHy03sddBJFo6RKjJK7tUW3k3=
+q1TRzdOBnVoG3VAQTFdQ0WBfdAzVgn0JacjoeIBMgDqPfZIbrt9_NpL5XeUO3iC-nwH4jTWxZUd=
+d7H2q0ijTGl0CojWFK373hnsow5ShggqDsHGDdpbLWztKdCLkt0pOFFnWR_RfyiLXCpjIRMtj_1=
+y53thEsGZ0WbQUGHb0lcWeFTpFfqUgXDWXPE9UmB9jcGB5mAh5NAxyVImkYLYbhEEpNeDYa3deL=
+3LA1f9fdly4dCrDF6AjA_VMVkcMxHPEsbEqIIEyv3S0_q7F9v5a99Ww1aPuTQLjrRVMNVLlxay9=
+iMB-xL-7xAO-1_5Rr3zY31O4J9gTN9S1dLNQ8f01ZfX9nqxcr0BnohGY96b4Yw0EuFM9Uo7iZqa=
+NCAURKOKUKgFROBpaOSEJRMY51o-4xpXOrntJVAVLtw6-iexjvlCKOWryMq09A0iWYCQvWDNsFJ=
+Wn3rmsGjIiZPhLfb8=3D" data-managed-link=3D"cta_link_url" target=3D"_blank" =
+data-link-id=3D"3d5e26d1776811f0bb3d4b44769d49b4"><img agilecontent=3D"true=
+" src=3D"https://images=2Eharmony=2Eepsilon=2Ecom/ContentHandler/images?id=
+=3D7bfd0f74-ab6c-4a2f-9c52-b8b53221835e" data-groupid=3D"cta" alt=3D"WATCH"=
+ width=3D"160" height=3D"auto" border=3D"0" style=3D"display: block"></a></=
+td> </tr> </tbody></table> <!-- End Image CTA -->  <!-- End CTA Block --> <=
+/td> </tr> </tbody></table> <!-- End CTA Table --> </td> </tr> </tbody></ta=
+ble> </td> </tr> </tbody></table> </div> </section> <!-- end 1-016: CTA -->=
+ </td></tr><tr><td bgcolor=3D"#FFFFFF"><!-- Start 1-000: Spacer --><section=
+ id=3D"1000" layout-row=3D"true"><div layout-row=3D"true"><table layout-row=
+=3D"true" role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" bgcolor=3D"#FFFFFF"> <tbody><tr layout-row=3D"true"> <=
+td> <table role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D=
+"0"> <tbody><tr> <td height=3D"5" align=3D"left" valign=3D"top" bgcolor=3D"=
+#FFFFFF" style=3D"line-height: 0px; padding: 0px;"><img src=3D"https://imag=
+es=2Eharmony=2Eepsilon=2Ecom/ContentHandler/images?id=3D3f67ada7-a01e-4c02-=
+ab71-8b46fd3106ae" height=3D"5" style=3D"display: block; height: 5px" borde=
+r=3D"0" alt=3D""></td> </tr> </tbody></table> </td> </tr> </tbody></table> =
+</div> </section> <!-- End 1-000: Spacer --> </td></tr></tbody></table></td=
+></tr><tr><td><table role=3D"presentation" bgcolor=3D"#CCCCCC" width=3D"640=
+" border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"wrap"><tbody><tr><td bgcolor=3D"#cccccc"><!-- Start 1-011: Scaled Image=
+ -->
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#cccccc"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcc6/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4OeU5Yt0eCEr9qaJ=
+xxyStEzkNz8R0LMlfN73cOTp4IVFnzaAzgmFR6LpY2bhQTLnmnu9LoIOC7Ym1elknEB5zXWGrC9=
+z2KnkvNuY6Nd_mn2zhKPdHEIcbnRs4BDlitBxEorY95k1-rVLmVl5DC6ncvpC5ssLVnvEb-Bi-V=
+X3G9BLi34Z2l52by-nXERnaFjZ3iaNDRMchlLzH5QIWHC5TKkIkV2jWu4ze7xi7Zv_cjCLCjY_6=
+m1DkvfU4Wbpj8yjgCWiHkjxnW3CO9rYIZELOCsLr_-lNFmrG5HX5Iz3_yQLdg9Z-QSoL_bvffTN=
+2cBUnZBWiOU1pyXGKXmOB5XEsDprNxmPL_8S89a0z3FzcfoohF8UlbX_yATXcIXJrd0NqWXewot=
+uHSTQqaPDeB_NEwv0qzDb3agKNPUJhp1Dp5afJgR8KwrTVwgdK4z-IRBiy4dpqOnHn6lELmwtC-=
+_8q5Ryur5cX2fUPGGpP3m0Iph70CyhqD_benJrKj1woYhszTKWzZETTNeBMU-15vn-0=3D" dat=
+a-managed-link=3D"scaled_link_url" target=3D"_blank" data-link-id=3D"9260ea=
+e1e2b011ed9d38113c64cfde23"><img agilecontent=3D"true" src=3D"https://image=
+s=2Eharmony=2Eepsilon=2Ecom/ContentHandler/images?id=3D8f25dd32-84fc-49cd-8=
+07e-d95fc8fb9a45" alt=3D"Takeaways from each Sunday matchup of kickoff week=
+end" width=3D"640" height=3D"auto" style=3D"display: block; vertical-align:=
+ top" border=3D"0" class=3D"wrap"></a></td> </tr> </tbody></table> </td> </=
+tr> </tbody></table> </div> </section> <!-- End 1-011: Scaled Image --> </t=
+d></tr><tr><td bgcolor=3D"#031E3F"><!-- Start 1-004: Headline | H1 --><sect=
+ion id=3D"1004_h1" layout-row=3D"true"><div layout-row=3D"true"><table layo=
+ut-row=3D"true" role=3D"presentation" width=3D"100%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" bgcolor=3D"#031E3F"> <tbody><tr layout-row=3D"tr=
+ue"> <td valign=3D"top" align=3D"left"> <table role=3D"presentation" width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"wrap"> =
+<tbody><tr> <td align=3D"center" style=3D"padding: 20px 30px 20px 30px" cla=
+ss=3D"pad20rl match"><h1 style=3D"font-size: 14px; mso-line-height-rule: ex=
+actly; line-height: 120%; margin: 0px; font-weight: 700; letter-spacing: 0p=
+x; text-transform: none; color: #000001; font-family: 'All-ProSans--bold', =
+Arial, sans-serif" enable-personalization=3D"true" data-richtext=3D"h1_text=
+" data-groupid=3D"h1" class=3D"mobile_h2"><a href=3D"https://email=2Enfl=2E=
+com/T/v60000019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcc7/1=
+4041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8A=
+hGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4OeU5Y=
+t0eCEr9qaJxxyStEzkNz8R0LMlfN73cOTp4IVFnzaAzgmFR6LpY2bhQTLnmnu9LoIOC7Ym1elkn=
+EB5zXWGrC9z2KnkvNuY6Nd_mn2zhKPdHEIcbnRs4BDlitBxEorY95k1-rVLmVl5DC6ncvpC5ssL=
+VnvEb-Bi-VX3G9BLi34Z2l52by-nXERnaFjZ3iaNDRMchlLzH5QIWHC5TKkIkV2jWu4ze7xi7Zv=
+_cjCLCjY_6m1DkvfU4Wbpj8yjgCWiHkjxnW3CO9rYIZELOCsLr_-lNFmrG5HX5Iz3_yQLdg9Z-Q=
+SoL_bvffTN2cBUnZBWiOU1pyXGKXmOB5XEsDprNxmPL_8S89a0z3FzcfoohF8UlbX_yATXcIXJr=
+d0NqWXewotuHSTQqaPDeB_NEwv0qzDb3agKNPUJhp1Dp5afJgR8KwrTVwgdK4z-IRBiy4dpqOnH=
+n6lELmwtC-_8pL47zqwCOm6f8QMyxXGdcxaybIfRC6FBRp_iFcyFuXrcJuvWiKgableBMU-15vn=
+-0=3D" target=3D"_blank" rel=3D"noopener" style=3D"color: rgb(0, 0, 1); fon=
+t-weight: inherit; background: none; text-decoration: none;" data-link-id=
+=3D"2ed494108c9311f09ed1eb2b5b3f6427"><span style=3D"font-size: 36px; line-=
+height: 120%; color: rgb(255, 255, 255);">Takeaways from each Sunday matchu=
+p of kickoff weekend</span></a></h1> </td> </tr> </tbody></table> </td> </t=
+r> </tbody></table> </div> </section> <!-- End 1-004: Headline | H1 --> </t=
+d></tr><tr><td bgcolor=3D"#031E3F"><!-- start 1-016: CTA --><section id=3D"=
+1016_cta" layout-row=3D"true"><div layout-row=3D"true"><table layout-row=3D=
+"true" role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" bgcolor=3D"#031E3F"> <tbody><tr layout-row=3D"true"> <td =
+valign=3D"top" align=3D"left"> <table role=3D"presentation" width=3D"100%" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"wrap"> <tbody><tr=
+> <td align=3D"left" valign=3D"top"> <!-- Start CTA Table --> <table role=
+=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"> <tbody><tr> <td align=3D"center" valign=3D"top" style=3D"padding: 0=
+px 0px 30px 0px" class=3D"pad20rl"> <!-- Start CTA Block -->  <!-- Start Im=
+age CTA --> <table role=3D"presentation" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" class=3D"wrap"> <tbody><tr> <td align=3D"center" valign=3D"t=
+op"><a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c658=
+48/1404144861d44cef0000021ef3a0bcc8/14041448-61d4-4cef-8138-e2ec7584f57e?__=
+dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIo=
+XcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4OeU5Yt0eCEr9qaJxxyStEzkNz8R0LMlfN73cOTp4IVF=
+nzaAzgmFR6LpY2bhQTLnmnu9LoIOC7Ym1elknEB5zXWGrC9z2KnkvNuY6Nd_mn2zhKPdHEIcbnR=
+s4BDlitBxEorY95k1-rVLmVl5DC6ncvpC5ssLVnvEb-Bi-VX3G9BLi34Z2l52by-nXERnaFjZ3i=
+aNDRMchlLzH5QIWHC5TKkIkV2jWu4ze7xi7Zv_cjCLCjY_6m1DkvfU4Wbpj8yjgCWiHkjxnW3CO=
+9rYIZELOCsLr_-lNFmrG5HX5Iz3_yQLdg9Z-QSoL_bvffTN2cBUnZBWiOU1pyXGKXmOB5XEsDpr=
+NxmPL_8S89a0z3FzcfoohF8UlbX_yATXcIXJrd0NqWXewotuHSTQqaPDeB_NEwv0qzDb3agKNPU=
+Jhp1Dp5afJgR8KwrTVwgdK4z-IRBiy4dpqOnHn6lELmwtC-_8pR6RTJKuXMtSxERbt8jbaAlM_x=
+v1giR0_Ho9uwXWeEC73VnA9HDQXHeBMU-15vn-0=3D" data-managed-link=3D"cta_link_u=
+rl" target=3D"_blank" data-link-id=3D"c99f0ac07cdf11f0bf21c788d710c76b"><im=
+g agilecontent=3D"true" src=3D"https://images=2Eharmony=2Eepsilon=2Ecom/Con=
+tentHandler/images?id=3D7154434b-a8c3-4f69-a06a-08b3ec50de09" data-groupid=
+=3D"cta" alt=3D"READ MORE" width=3D"200" height=3D"auto" border=3D"0" style=
+=3D"display: block"></a></td> </tr> </tbody></table> <!-- End Image CTA -->=
+  <!-- End CTA Block --> </td> </tr> </tbody></table> <!-- End CTA Table --=
+> </td> </tr> </tbody></table> </td> </tr> </tbody></table> </div> </sectio=
+n> <!-- end 1-016: CTA --> </td></tr><tr><td bgcolor=3D"#FFFFFF"><!-- Start=
+ 1-000: Spacer --><section id=3D"1000" layout-row=3D"true"><div layout-row=
+=3D"true"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#FFFFFF"> <tbody=
+><tr layout-row=3D"true"> <td> <table role=3D"presentation" width=3D"100%" =
+border=3D"0" cellspacing=3D"0"> <tbody><tr> <td height=3D"5" align=3D"left"=
+ valign=3D"top" bgcolor=3D"#FFFFFF" style=3D"line-height: 0px; padding: 0px=
+;"><img src=3D"https://images=2Eharmony=2Eepsilon=2Ecom/ContentHandler/imag=
+es?id=3D3f67ada7-a01e-4c02-ab71-8b46fd3106ae" height=3D"5" style=3D"display=
+: block; height: 5px" border=3D"0" alt=3D""></td> </tr> </tbody></table> </=
+td> </tr> </tbody></table> </div> </section> <!-- End 1-000: Spacer --> </t=
+d></tr></tbody></table></td></tr><tr><td><table role=3D"presentation" bgcol=
+or=3D"#CCCCCC" width=3D"640" border=3D"0" align=3D"center" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"wrap"><tbody><tr><td bgcolor=3D"#cccccc"><!-- =
+Start 1-011: Scaled Image -->
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#cccccc"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcc9/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4OeU5Yt0eCEr9qaJ=
+xxySvUFemSyWrY2q_BR888K_1a3OG0ALBganTiV_C42xIOnOzdxYvM_SMTppIhVdroGkEjta-pp=
+nf6iHTI48iSVqABm9tCs-L0YR3cjBQMW6Dly_3XipnHg3xuwQW1lEvmJ4tMeWPFUojmQwoftLz4=
+UB972zhKPdHEIcbnRs4BDlitBxEorY95k1-rVLmVl5DC6ncvpC5ssLVnvEb-Bi-VX3G9BLi34Z2=
+l52by-nXERnaFjZ3iaNDRMchlLzH5QIWHC5TKkIkV2jWu4ze7xi7Zv_cjCLCjY_6m1DkvfU4Wbp=
+j8yjgCWiHkjxnW3CO9rYIZELOCsLr_-lNFmrG5HX5Iz3_yQLdg9Z-QSoL_bvffTN2cBUnZBWiOU=
+1pyXGKXmOB5XEsDprNxmPL_8S89a0z3FzcfoohF8UlbX_yATXcIXJrd0NqWXewotuHSTQqaPDeB=
+_NEwv0qzDb3agKNPUJhp1Dp5afJgR8KwrTVwgdK4z-IRBiy4dpqOnHn6lELmwtC-_8oXaq-8KwD=
+C23JPdJESnKrFMxSM8O4W9QPBOBR4yC5RYi7aDNyxpbkueBMU-15vn-0=3D" data-managed-l=
+ink=3D"scaled_link_url" target=3D"_blank" data-link-id=3D"968e19d1e2b011ed9=
+d38113c64cfde23"><img agilecontent=3D"true" src=3D"https://images=2Eharmony=
+=2Eepsilon=2Ecom/ContentHandler/images?id=3D80f0b833-ba12-46cd-a54b-3286fe8=
+8a502" alt=3D"Derrick Henry passes Jim Brown on all-time rushing TD list" w=
+idth=3D"640" height=3D"auto" style=3D"display: block; vertical-align: top" =
+border=3D"0" class=3D"wrap"></a></td> </tr> </tbody></table> </td> </tr> </=
+tbody></table> </div> </section> <!-- End 1-011: Scaled Image --> </td></tr=
+><tr><td bgcolor=3D"#031E3F"><!-- Start 1-004: Headline | H1 --><section id=
+=3D"1004_h1" layout-row=3D"true"><div layout-row=3D"true"><table layout-row=
+=3D"true" role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" bgcolor=3D"#031E3F"> <tbody><tr layout-row=3D"true"> <=
+td valign=3D"top" align=3D"left"> <table role=3D"presentation" width=3D"100=
+%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"wrap"> <tbody>=
+<tr> <td align=3D"center" style=3D"padding: 20px 30px 20px 30px" class=3D"p=
+ad20rl match"><h1 style=3D"font-size: 14px; mso-line-height-rule: exactly; =
+line-height: 120%; margin: 0px; font-weight: 700; letter-spacing: 0px; text=
+-transform: none; color: #000001; font-family: 'All-ProSans--bold', Arial, =
+sans-serif" enable-personalization=3D"true" data-richtext=3D"h1_text" data-=
+groupid=3D"h1" class=3D"mobile_h2"><a href=3D"https://email=2Enfl=2Ecom/T/v=
+60000019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcca/14041448=
+-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__=
+F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4OeU5Yt0eCEr9=
+qaJxxySvUFemSyWrY2q_BR888K_1a3OG0ALBganTiV_C42xIOnOzdxYvM_SMTppIhVdroGkEjta=
+-ppnf6iHTI48iSVqABm9tCs-L0YR3cjBQMW6Dly_3XipnHg3xuwQW1lEvmJ4tMeWPFUojmQwoft=
+Lz4UB972zhKPdHEIcbnRs4BDlitBxEorY95k1-rVLmVl5DC6ncvpC5ssLVnvEb-Bi-VX3G9BLi3=
+4Z2l52by-nXERnaFjZ3iaNDRMchlLzH5QIWHC5TKkIkV2jWu4ze7xi7Zv_cjCLCjY_6m1DkvfU4=
+Wbpj8yjgCWiHkjxnW3CO9rYIZELOCsLr_-lNFmrG5HX5Iz3_yQLdg9Z-QSoL_bvffTN2cBUnZBW=
+iOU1pyXGKXmOB5XEsDprNxmPL_8S89a0z3FzcfoohF8UlbX_yATXcIXJrd0NqWXewotuHSTQqaP=
+DeB_NEwv0qzDb3agKNPUJhp1Dp5afJgR8KwrTVwgdK4z-IRBiy4dpqOnHn6lELmwtC-_8qCsg5D=
+_eCe9LNXOjOQ5MFdV_J0eaFVyNTZNdLOGTXwsLqy7auyDeq6eBMU-15vn-0=3D" target=3D"_=
+blank" rel=3D"noopener" style=3D"color: rgb(0, 0, 1); font-weight: inherit;=
+ background: none; text-decoration: none;" data-link-id=3D"45d2cf108c9311f0=
+9ed1eb2b5b3f6427"><span style=3D"font-size: 36px; line-height: 120%; color:=
+ rgb(255, 255, 255);">Derrick Henry passes Jim Brown on all-time rushing TD=
+ list</span></a></h1> </td> </tr> </tbody></table> </td> </tr> </tbody></ta=
+ble> </div> </section> <!-- End 1-004: Headline | H1 --> </td></tr><tr><td =
+bgcolor=3D"#031E3F"><!-- start 1-016: CTA --><section id=3D"1016_cta" layou=
+t-row=3D"true"><div layout-row=3D"true"><table layout-row=3D"true" role=3D"=
+presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" bgcolor=3D"#031E3F"> <tbody><tr layout-row=3D"true"> <td valign=3D"top" =
+align=3D"left"> <table role=3D"presentation" width=3D"100%" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" class=3D"wrap"> <tbody><tr> <td align=3D"=
+left" valign=3D"top"> <!-- Start CTA Table --> <table role=3D"presentation"=
+ width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"> <tbody><t=
+r> <td align=3D"center" valign=3D"top" style=3D"padding: 0px 0px 30px 0px" =
+class=3D"pad20rl"> <!-- Start CTA Block -->  <!-- Start Image CTA --> <tabl=
+e role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" cl=
+ass=3D"wrap"> <tbody><tr> <td align=3D"center" valign=3D"top"><a href=3D"ht=
+tps://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/1404144861d44c=
+ef0000021ef3a0bccb/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg=
+2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWo=
+X_0JoZLAZABQF-4OeU5Yt0eCEr9qaJxxySvUFemSyWrY2q_BR888K_1a3OG0ALBganTiV_C42xI=
+OnOzdxYvM_SMTppIhVdroGkEjta-ppnf6iHTI48iSVqABm9tCs-L0YR3cjBQMW6Dly_3XipnHg3=
+xuwQW1lEvmJ4tMeWPFUojmQwoftLz4UB972zhKPdHEIcbnRs4BDlitBxEorY95k1-rVLmVl5DC6=
+ncvpC5ssLVnvEb-Bi-VX3G9BLi34Z2l52by-nXERnaFjZ3iaNDRMchlLzH5QIWHC5TKkIkV2jWu=
+4ze7xi7Zv_cjCLCjY_6m1DkvfU4Wbpj8yjgCWiHkjxnW3CO9rYIZELOCsLr_-lNFmrG5HX5Iz3_=
+yQLdg9Z-QSoL_bvffTN2cBUnZBWiOU1pyXGKXmOB5XEsDprNxmPL_8S89a0z3FzcfoohF8UlbX_=
+yATXcIXJrd0NqWXewotuHSTQqaPDeB_NEwv0qzDb3agKNPUJhp1Dp5afJgR8KwrTVwgdK4z-IRB=
+iy4dpqOnHn6lELmwtC-_8ogtBhUOv2vP2FgXMWnAWQTHq2YZfUFFKZ2G986wN4z-678f_rcuSRy=
+eBMU-15vn-0=3D" data-managed-link=3D"cta_link_url" target=3D"_blank" data-l=
+ink-id=3D"5a20d8c1c2a111efb0681731bf266c04"><img agilecontent=3D"true" src=
+=3D"https://images=2Eharmony=2Eepsilon=2Ecom/ContentHandler/images?id=3D715=
+4434b-a8c3-4f69-a06a-08b3ec50de09" data-groupid=3D"cta" alt=3D"READ MORE" w=
+idth=3D"200" height=3D"auto" border=3D"0" style=3D"display: block"></a></td=
+> </tr> </tbody></table> <!-- End Image CTA -->  <!-- End CTA Block --> </t=
+d> </tr> </tbody></table> <!-- End CTA Table --> </td> </tr> </tbody></tabl=
+e> </td> </tr> </tbody></table> </div> </section> <!-- end 1-016: CTA --> <=
+/td></tr><tr><td bgcolor=3D"#FFFFFF"><!-- Start 1-000: Spacer --><section i=
+d=3D"1000" layout-row=3D"true"><div layout-row=3D"true"><table layout-row=
+=3D"true" role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" bgcolor=3D"#FFFFFF"> <tbody><tr layout-row=3D"true"> <=
+td> <table role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D=
+"0"> <tbody><tr> <td height=3D"5" align=3D"left" valign=3D"top" bgcolor=3D"=
+#FFFFFF" style=3D"line-height: 0px; padding: 0px;"><img src=3D"https://imag=
+es=2Eharmony=2Eepsilon=2Ecom/ContentHandler/images?id=3D3f67ada7-a01e-4c02-=
+ab71-8b46fd3106ae" height=3D"5" style=3D"display: block; height: 5px" borde=
+r=3D"0" alt=3D""></td> </tr> </tbody></table> </td> </tr> </tbody></table> =
+</div> </section> <!-- End 1-000: Spacer --> </td></tr></tbody></table></td=
+></tr><tr><td><table role=3D"presentation" bgcolor=3D"#CCCCCC" width=3D"640=
+" border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"wrap"><tbody><tr><td bgcolor=3D"#cccccc"><!-- Start 1-011: Scaled Image=
+ -->
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#cccccc"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bccc/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4OeU5Yt0eCEr9qaJ=
+xxySuUFOcI0b71OPGZARtpUK_LUazajg3ftHUAEES5KJfHmSLe3xB7KTnul9v5Ma5AJzIF1D-UI=
+fFEmyDJ6kXRApWSF1YL_ZgyM8-MxREOzklaHoA6j32SG67ffzaS-V3lDt4gvp8B-I01sWVHXex9=
+qtIo0xpdAqI1hSt-94Z7KMOUoYIKg7Bxg3aWy1s7SnQi5LdKThRZ1kf0X8oi1wqYyETLY_9cud7=
+YRLBmdFm0FBh29JXFnhU6RX6lIFw1lzxPVJgfY3BgeZgIeTQMclSJpGC2G4RBKTXg2Gt3Xi9ywN=
+X_X3ZcuHQqwxegIwP1TFZHDMRzxLGxKiCBMr90tP6uxfb-WvfVsNWj7k0C460VTDVS5cWsvYjAf=
+sS_u8QDvtf-Ua982N9TuCfYEzfUtXSzUPH9NWX1_Z6sXK9AZ6IRmPem-GMNBLhTPVKO4mamjQgF=
+ESjilCoBUTgaWjkhCUTGOdaPHL2NIlopQ7QbKVCFGbGSV4LpeIfuJXO65p6mmfZ1Gi0KGHGHpWc=
+9JxoyImT4S32_" data-managed-link=3D"scaled_link_url" target=3D"_blank" data=
+-link-id=3D"f5c64cf0a64611ef9ac73fc41fd4e64a"><img agilecontent=3D"true" sr=
+c=3D"https://images=2Eharmony=2Eepsilon=2Ecom/ContentHandler/images?id=3D57=
+845497-fa19-4672-902b-931638e7e381" alt=3D"Matthew Stafford becomes 10th to=
+ eclipse 60,000 passing yards" width=3D"640" height=3D"auto" style=3D"displ=
+ay: block; vertical-align: top" border=3D"0" class=3D"wrap"></a></td> </tr>=
+ </tbody></table> </td> </tr> </tbody></table> </div> </section> <!-- End 1=
+-011: Scaled Image --> </td></tr><tr><td bgcolor=3D"#031E3F"><!-- Start 1-0=
+04: Headline | H1 --><section id=3D"1004_h1" layout-row=3D"true"><div layou=
+t-row=3D"true"><table layout-row=3D"true" role=3D"presentation" width=3D"10=
+0%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#031E3F"> <=
+tbody><tr layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table ro=
+le=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" class=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding:=
+ 20px 30px 20px 30px" class=3D"pad20rl match"><h1 style=3D"font-size: 14px;=
+ mso-line-height-rule: exactly; line-height: 120%; margin: 0px; font-weight=
+: 700; letter-spacing: 0px; text-transform: none; color: #000001; font-fami=
+ly: 'All-ProSans--bold', Arial, sans-serif" enable-personalization=3D"true"=
+ data-richtext=3D"h1_text" data-groupid=3D"h1" class=3D"mobile_h2"><a href=
+=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/14041448=
+61d44cef0000021ef3a0bccd/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4=
+RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCC=
+PvXMWoX_0JoZLAZABQF-4OeU5Yt0eCEr9qaJxxySuUFOcI0b71OPGZARtpUK_LUazajg3ftHUAE=
+ES5KJfHmSLe3xB7KTnul9v5Ma5AJzIF1D-UIfFEmyDJ6kXRApWSF1YL_ZgyM8-MxREOzklaHoA6=
+j32SG67ffzaS-V3lDt4gvp8B-I01sWVHXex9qtIo0xpdAqI1hSt-94Z7KMOUoYIKg7Bxg3aWy1s=
+7SnQi5LdKThRZ1kf0X8oi1wqYyETLY_9cud7YRLBmdFm0FBh29JXFnhU6RX6lIFw1lzxPVJgfY3=
+BgeZgIeTQMclSJpGC2G4RBKTXg2Gt3Xi9ywNX_X3ZcuHQqwxegIwP1TFZHDMRzxLGxKiCBMr90t=
+P6uxfb-WvfVsNWj7k0C460VTDVS5cWsvYjAfsS_u8QDvtf-Ua982N9TuCfYEzfUtXSzUPH9NWX1=
+_Z6sXK9AZ6IRmPem-GMNBLhTPVKO4mamjQgFESjilCoBUTgaWjkhCUTGOdaP7Uj4VKddUZYW4Qi=
+oyfsH6AS2CGs6USUXLGi0Duoc3CuZv2ofMXDPsxoyImT4S32_" target=3D"_blank" rel=3D=
+"noopener" style=3D"color: rgb(0, 0, 1); font-weight: inherit; background: =
+none; text-decoration: none;" data-link-id=3D"5c9c65808c9311f09ed1eb2b5b3f6=
+427"><span style=3D"font-size: 36px; line-height: 120%; color: rgb(255, 255=
+, 255);">Matthew Stafford becomes 10th to eclipse 60,000 passing yards</spa=
+n></a></h1> </td> </tr> </tbody></table> </td> </tr> </tbody></table> </div=
+> </section> <!-- End 1-004: Headline | H1 --> </td></tr><tr><td bgcolor=3D=
+"#031E3F"><!-- start 1-016: CTA --><section id=3D"1016_cta" layout-row=3D"t=
+rue"><div layout-row=3D"true"><table layout-row=3D"true" role=3D"presentati=
+on" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=
+=3D"#031E3F"> <tbody><tr layout-row=3D"true"> <td valign=3D"top" align=3D"l=
+eft"> <table role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" class=3D"wrap"> <tbody><tr> <td align=3D"left" val=
+ign=3D"top"> <!-- Start CTA Table --> <table role=3D"presentation" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"> <tbody><tr> <td al=
+ign=3D"center" valign=3D"top" style=3D"padding: 0px 0px 30px 0px" class=3D"=
+pad20rl"> <!-- Start CTA Block -->  <!-- Start Image CTA --> <table role=3D=
+"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"wr=
+ap"> <tbody><tr> <td align=3D"center" valign=3D"top"><a href=3D"https://ema=
+il=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/1404144861d44cef0000021=
+ef3a0bcce/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8=
+b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0JoZLAZ=
+ABQF-4OeU5Yt0eCEr9qaJxxySuUFOcI0b71OPGZARtpUK_LUazajg3ftHUAEES5KJfHmSLe3xB7=
+KTnul9v5Ma5AJzIF1D-UIfFEmyDJ6kXRApWSF1YL_ZgyM8-MxREOzklaHoA6j32SG67ffzaS-V3=
+lDt4gvp8B-I01sWVHXex9qtIo0xpdAqI1hSt-94Z7KMOUoYIKg7Bxg3aWy1s7SnQi5LdKThRZ1k=
+f0X8oi1wqYyETLY_9cud7YRLBmdFm0FBh29JXFnhU6RX6lIFw1lzxPVJgfY3BgeZgIeTQMclSJp=
+GC2G4RBKTXg2Gt3Xi9ywNX_X3ZcuHQqwxegIwP1TFZHDMRzxLGxKiCBMr90tP6uxfb-WvfVsNWj=
+7k0C460VTDVS5cWsvYjAfsS_u8QDvtf-Ua982N9TuCfYEzfUtXSzUPH9NWX1_Z6sXK9AZ6IRmPe=
+m-GMNBLhTPVKO4mamjQgFESjilCoBUTgaWjkhCUTGOdaPPASldiGteu6dkwA_oIr3Krj-knrAE6=
+XciZduVgk6Fl4LNW8EPI7cHhoyImT4S32_" data-managed-link=3D"cta_link_url" targ=
+et=3D"_blank" data-link-id=3D"ecccfbf1b1f711efb06f912d34e6248f"><img agilec=
+ontent=3D"true" src=3D"https://images=2Eharmony=2Eepsilon=2Ecom/ContentHand=
+ler/images?id=3D7154434b-a8c3-4f69-a06a-08b3ec50de09" data-groupid=3D"cta" =
+alt=3D"READ MORE" width=3D"200" height=3D"auto" border=3D"0" style=3D"displ=
+ay: block"></a></td> </tr> </tbody></table> <!-- End Image CTA -->  <!-- En=
+d CTA Block --> </td> </tr> </tbody></table> <!-- End CTA Table --> </td> <=
+/tr> </tbody></table> </td> </tr> </tbody></table> </div> </section> <!-- e=
+nd 1-016: CTA --> </td></tr><tr><td bgcolor=3D"#FFFFFF"><!-- Start 1-000: S=
+pacer --><section id=3D"1000" layout-row=3D"true"><div layout-row=3D"true">=
+<table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#FFFFFF"> <tbody><tr layou=
+t-row=3D"true"> <td> <table role=3D"presentation" width=3D"100%" border=3D"=
+0" cellspacing=3D"0"> <tbody><tr> <td height=3D"5" align=3D"left" valign=3D=
+"top" bgcolor=3D"#FFFFFF" style=3D"line-height: 0px; padding: 0px;"><img sr=
+c=3D"https://images=2Eharmony=2Eepsilon=2Ecom/ContentHandler/images?id=3D3f=
+67ada7-a01e-4c02-ab71-8b46fd3106ae" height=3D"5" style=3D"display: block; h=
+eight: 5px" border=3D"0" alt=3D""></td> </tr> </tbody></table> </td> </tr> =
+</tbody></table> </div> </section> <!-- End 1-000: Spacer --> </td></tr></t=
+body></table></td></tr><tr><td><table role=3D"presentation" bgcolor=3D"#CCC=
+CCC" width=3D"640" border=3D"0" align=3D"center" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"wrap"><tbody><tr><td bgcolor=3D"#cccccc"><!-- Start 1-01=
+1: Scaled Image -->
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#cccccc"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bccf/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4OeU5Yt0eCEr9qaJ=
+xxySt7UGD0FYMKgBrUPCXqIOgGckaojROW3M9ql-UIWNfCCJ3JFjIu63OYkkEExDVx4Icnc5FwL=
+cDxJSutnoDyw5yy3tbTZwq49Ry27jHR8aJ6aYaLAsw76VPwyJghP9ScBiTK_1rqcnnNm9-nTvJl=
+TlJJYd94Bclm6rjGKq-RMonZa_ukE7kZA_5SBh0-8_xbSpIk7p8NrjVckvhZ4Lz0x-Hy_LtEOJJ=
+fw0dXKC7V1__keKSHRJVQTGBOAsJe0COpIthmUWvSQWnlV631r0GVLCt9U3ZL1uJ-oKrJmHmPMB=
+4fhsWfJux5u59PD-CU03CjwF2Kcql1xxFUTMz4b6DDlHEAvurcEd2VHvhtjFrOUu-3X0uYegrUX=
+ggcwzNYBYZ_b9tcybswv0qmdFDb2GN92ghDAlySXq0IU9U6ZaylnvOK3R7FWg_afvbzZb26tc-5=
+uk-VXKi7jbxJY7tJQ1n2LE7WysV00LDPYo6Uyyj-O8JLtO5lKhKBXNjARadAeXRimMs=3D" dat=
+a-managed-link=3D"scaled_link_url" target=3D"_blank" data-link-id=3D"98ec55=
+21e2b011ed9d38113c64cfde23"><img agilecontent=3D"true" src=3D"https://image=
+s=2Eharmony=2Eepsilon=2Ecom/ContentHandler/images?id=3D6afb4da1-21a6-4b22-b=
+419-b29c01ad4c92" alt=3D"What to watch for in Vikes-Bears 'MNF' divisional =
+clash" width=3D"640" height=3D"auto" style=3D"display: block; vertical-alig=
+n: top" border=3D"0" class=3D"wrap"></a></td> </tr> </tbody></table> </td> =
+</tr> </tbody></table> </div> </section> <!-- End 1-011: Scaled Image --> <=
+/td></tr><tr><td bgcolor=3D"#031E3F"><!-- Start 1-004: Headline | H1 --><se=
+ction id=3D"1004_h1" layout-row=3D"true"><div layout-row=3D"true"><table la=
+yout-row=3D"true" role=3D"presentation" width=3D"100%" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" bgcolor=3D"#031E3F"> <tbody><tr layout-row=3D"=
+true"> <td valign=3D"top" align=3D"left"> <table role=3D"presentation" widt=
+h=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"wrap">=
+ <tbody><tr> <td align=3D"center" style=3D"padding: 20px 30px 20px 30px" cl=
+ass=3D"pad20rl match"><h1 style=3D"font-size: 14px; mso-line-height-rule: e=
+xactly; line-height: 120%; margin: 0px; font-weight: 700; letter-spacing: 0=
+px; text-transform: none; color: #000001; font-family: 'All-ProSans--bold',=
+ Arial, sans-serif" enable-personalization=3D"true" data-richtext=3D"h1_tex=
+t" data-groupid=3D"h1" class=3D"mobile_h2"><a href=3D"https://email=2Enfl=
+=2Ecom/T/v60000019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcd=
+0/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0=
+r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4Oe=
+U5Yt0eCEr9qaJxxySt7UGD0FYMKgBrUPCXqIOgGckaojROW3M9ql-UIWNfCCJ3JFjIu63OYkkEE=
+xDVx4Icnc5FwLcDxJSutnoDyw5yy3tbTZwq49Ry27jHR8aJ6aYaLAsw76VPwyJghP9ScBiTK_1r=
+qcnnNm9-nTvJlTlJJYd94Bclm6rjGKq-RMonZa_ukE7kZA_5SBh0-8_xbSpIk7p8NrjVckvhZ4L=
+z0x-Hy_LtEOJJfw0dXKC7V1__keKSHRJVQTGBOAsJe0COpIthmUWvSQWnlV631r0GVLCt9U3ZL1=
+uJ-oKrJmHmPMB4fhsWfJux5u59PD-CU03CjwF2Kcql1xxFUTMz4b6DDlHEAvurcEd2VHvhtjFrO=
+Uu-3X0uYegrUXggcwzNYBYZ_b9tcybswv0qmdFDb2GN92ghDAlySXq0IU9U6ZaylnvOK3R7FWg_=
+afvbzZb26tc-5uk9GAUAbvViyK7vuTZEOG0ywmBvByVkU58_EdE1UiqtQYQCWMNxL2-0eRadAeX=
+RimMs=3D" target=3D"_blank" rel=3D"noopener" style=3D"color: rgb(0, 0, 1); =
+font-weight: inherit; background: none; text-decoration: none;" data-link-i=
+d=3D"763c9b908c9311f09ed1eb2b5b3f6427"><span style=3D"font-size: 36px; line=
+-height: 120%; color: rgb(255, 255, 255);">What to watch for in Vikes-Bears=
+ 'MNF' divisional clash</span></a></h1> </td> </tr> </tbody></table> </td> =
+</tr> </tbody></table> </div> </section> <!-- End 1-004: Headline | H1 --> =
+</td></tr><tr><td bgcolor=3D"#031E3F"><!-- start 1-016: CTA --><section id=
+=3D"1016_cta" layout-row=3D"true"><div layout-row=3D"true"><table layout-ro=
+w=3D"true" role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" bgcolor=3D"#031E3F"> <tbody><tr layout-row=3D"true"> =
+<td valign=3D"top" align=3D"left"> <table role=3D"presentation" width=3D"10=
+0%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"wrap"> <tbody=
+><tr> <td align=3D"left" valign=3D"top"> <!-- Start CTA Table --> <table ro=
+le=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0"> <tbody><tr> <td align=3D"center" valign=3D"top" style=3D"padding:=
+ 0px 0px 30px 0px" class=3D"pad20rl"> <!-- Start CTA Block -->  <!-- Start =
+Image CTA --> <table role=3D"presentation" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0" class=3D"wrap"> <tbody><tr> <td align=3D"center" valign=3D=
+"top"><a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c6=
+5848/1404144861d44cef0000021ef3a0bcd1/14041448-61d4-4cef-8138-e2ec7584f57e?=
+__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHX=
+IoXcPxvDgUUCCPvXMWoX_0JoZLAZABQF-4OeU5Yt0eCEr9qaJxxySt7UGD0FYMKgBrUPCXqIOgG=
+ckaojROW3M9ql-UIWNfCCJ3JFjIu63OYkkEExDVx4Icnc5FwLcDxJSutnoDyw5yy3tbTZwq49Ry=
+27jHR8aJ6aYaLAsw76VPwyJghP9ScBiTK_1rqcnnNm9-nTvJlTlJJYd94Bclm6rjGKq-RMonZa_=
+ukE7kZA_5SBh0-8_xbSpIk7p8NrjVckvhZ4Lz0x-Hy_LtEOJJfw0dXKC7V1__keKSHRJVQTGBOA=
+sJe0COpIthmUWvSQWnlV631r0GVLCt9U3ZL1uJ-oKrJmHmPMB4fhsWfJux5u59PD-CU03CjwF2K=
+cql1xxFUTMz4b6DDlHEAvurcEd2VHvhtjFrOUu-3X0uYegrUXggcwzNYBYZ_b9tcybswv0qmdFD=
+b2GN92ghDAlySXq0IU9U6ZaylnvOK3R7FWg_afvbzZb26tc-5uk-3lzZNiy-iM8fCA3iY1w_XZT=
+UhXzW48xZlRXzqKy6sUF3C2cLYUxxPRadAeXRimMs=3D" data-managed-link=3D"cta_link=
+_url" target=3D"_blank" data-link-id=3D"3d476d9078f411f088bbd54b784552e6"><=
+img agilecontent=3D"true" src=3D"https://images=2Eharmony=2Eepsilon=2Ecom/C=
+ontentHandler/images?id=3D7154434b-a8c3-4f69-a06a-08b3ec50de09" data-groupi=
+d=3D"cta" alt=3D"READ MORE" width=3D"200" height=3D"auto" border=3D"0" styl=
+e=3D"display: block"></a></td> </tr> </tbody></table> <!-- End Image CTA --=
+>  <!-- End CTA Block --> </td> </tr> </tbody></table> <!-- End CTA Table -=
+-> </td> </tr> </tbody></table> </td> </tr> </tbody></table> </div> </secti=
+on> <!-- end 1-016: CTA --> </td></tr><tr><td bgcolor=3D"#FFFFFF"><!-- Star=
+t 1-000: Spacer --><section id=3D"1000" layout-row=3D"true"><div layout-row=
+=3D"true"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#FFFFFF"> <tbody=
+><tr layout-row=3D"true"> <td> <table role=3D"presentation" width=3D"100%" =
+border=3D"0" cellspacing=3D"0"> <tbody><tr> <td height=3D"5" align=3D"left"=
+ valign=3D"top" bgcolor=3D"#FFFFFF" style=3D"line-height: 0px; padding: 0px=
+;"><img src=3D"https://images=2Eharmony=2Eepsilon=2Ecom/ContentHandler/imag=
+es?id=3D3f67ada7-a01e-4c02-ab71-8b46fd3106ae" height=3D"5" style=3D"display=
+: block; height: 5px" border=3D"0" alt=3D""></td> </tr> </tbody></table> </=
+td> </tr> </tbody></table> </div> </section> <!-- End 1-000: Spacer --> </t=
+d></tr></tbody></table></td></tr><tr><td><table role=3D"presentation" bgcol=
+or=3D"#CCCCCC" width=3D"640" border=3D"0" align=3D"center" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"wrap"><tbody><tr><td bgcolor=3D"#ffffff"><!-- =
+Start 1-011: Scaled Image -->
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcd2/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVb=
+KLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwAL=
+GfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALr=
+eTHlAhLBxZ9_DV21_VO5RDD-VHIQ1GwR1JFI68PTkjBw2pBAgrAZGqOB_MyLXOng4q_E5wSc7S4=
+DdSb_lGkv38w3vvQOOfX0RsWEH0bOcORVyOsWIKV-tu5KLfY4OxdazyBYZ1xUQKNEdvyuYNmuKf=
+XRg-0NdZ-MCJlBH-fvSKwkux3iS_DgOfgKs719j38i7ep9TsAY9yft30X1kYFWZVLHpRBpQEvIN=
+2ODrxAHEz00HlJ7JJXgrUnWkGkXr0QV7t2YXtHtv3Sw9Ckgke2iJHfI2llNvg4VNiQ0was8hCpi=
+6PogWNEeJAcPmhwXInhxWAv0XwbfKKnZ4Xq6B3_MBIIKUujk9opfrv5s-eTK5HhLPopiE82ogBs=
+kmX_LuAPfvMqy7pds_vPMc0g0QwpeJXJqHowKm_fI5jRZZFvUPL3GnIH0m5etyontd6eXtv3dom=
+qKqh5x5Mhat5ddBhufCuAkgT2iSnrrBrxtbulAu8bF56A1rmCVRfsmdoMIJtRpDmS8KL_ZkrDfC=
+JKPefUCkdC5uxCGwkOZI33tGpCzPlo0-vtvP6CM5LUqCIkO77Jl35BRIHTY-nl_LhvsjW0D3TCC=
+DTaFj_A_NcUbmdnJJLNMVlm_YB8WxqopKg=3D=3D" data-managed-link=3D"scaled_link_=
+url" target=3D"_blank" data-link-id=3D"e85293d1458b11ed80e93d35bf16a563"><i=
+mg agilecontent=3D"true" src=3D"https://mi=2Enfl=2Ecom/p/rp/417cb82af0bb2ce=
+7=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c724177db71bfd73fcd6ab71dde415608d8=
+3f35&amp;mi_ecmp=3D1:1_NFL_Daily_Newsletter&amp;mi_fav_team=3D&amp;mi_NFLPl=
+usSub=3DN&amp;mi_FanaticsBanner=3D" alt=3D"tickets" width=3D"640" height=3D=
+"auto" style=3D"display: block; vertical-align: top" border=3D"0" class=3D"=
+wrap"></a></td> </tr> </tbody></table> </td> </tr> </tbody></table> </div> =
+</section> <!-- End 1-011: Scaled Image --> </td></tr></tbody></table></td>=
+</tr><tr><td><table role=3D"presentation" bgcolor=3D"#CCCCCC" width=3D"640"=
+ border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D=
+"wrap"><tbody><tr><td bgcolor=3D"#ffffff"><!-- Start 1-011: Scaled Image --=
+>
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcd3/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVb=
+KLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwAL=
+GfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALr=
+eTHlAhLBxZ9_DV3_lGkv38w3vvQOOfX0RsWEH0bOcORVyOsWIKV-tu5KLfY4OxdazyBYyB-ql2l=
+KEuYj59bPtuEZhZG_sTHy3gWWH-fvSKwkux1CYhs0BIBkziYyUws0vIHrTsAY9yft30X1kYFWZV=
+LHpRBpQEvIN2ODrxAHEz00HlJ7JJXgrUnWkGkXr0QV7t2YXtHtv3Sw9Ckgke2iJHfI2llNvg4VN=
+iQ0was8hCpi6PogWNEeJAcPmhwXInhxWAv0XwbfKKnZ4Xq6B3_MBIIKUujk9opfrv5s-eTK5HhL=
+PopiE82ogBskmX_LuAPfvMqy7pds_vPMc0g0QwpeJXJqHowKm_fI5jRZZFvUPL3GnIH0m5etyon=
+td6eXtv3domqKqh5x5Mhat5ddBhufCuAkgT2iSnrrBrxtbulAu8bF56A1rmCVRfsmdoMIJtRpDm=
+S8KL_ZkrDfCJKPefUCkdC5uxCGwkOZI33tGpCzPlo0-vtvP6CM5LUqCPfItQDgz8x0Ka6OIQHMy=
+7FfI9NKp8SRlezWBaxiJavPmdnJJLNMVlm_YB8WxqopKg=3D=3D" data-managed-link=3D"s=
+caled_link_url" target=3D"_blank" data-link-id=3D"1b2c6010d82411efb0aaddd6a=
+bad83c2"><img agilecontent=3D"true" src=3D"https://mi=2Enfl=2Ecom/p/rp/72be=
+8dce7b678e3a=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c724177db71bfd73fcd6ab71=
+dde415608d83f35&amp;mi_ecmp=3D1:1_NFL_Daily_Newsletter" alt=3D"" width=3D"6=
+40" height=3D"auto" style=3D"display: block; vertical-align: top" border=3D=
+"0" class=3D"wrap"></a></td> </tr> </tbody></table> </td> </tr> </tbody></t=
+able> </div> </section> <!-- End 1-011: Scaled Image --> </td></tr></tbody>=
+</table></td></tr><tr><td><table role=3D"presentation" bgcolor=3D"#CCCCCC" =
+width=3D"640" border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"wrap"><tbody><tr><td bgcolor=3D"#ffffff"><!-- Start 1-011: =
+Scaled Image -->
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcd4/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVb=
+KLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwAL=
+GfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALr=
+eTHlAhLBxZ9_DV2El088mrI3mkaa07qGVSyj3V9sjrLtljCTji6l8GiN4d1fbI6y7ZYwbvrHexa=
+pi_zufaVsfYIMVn1NadYTOpQwrcVVUQpRQ2KYSSQ1splA80h10HWDp2LykgbLv8bww2xb1xHEr8=
+okiNrEoh6TjmKmmXUJJRKwtHeu3fNgk56UpLAgOaDG0GonoJf633CcAJCxjfB20pdIsWY-piVPZ=
+6r_XdL5NaRoxUdES5N0wtSpEFvXEcSvyiSI2sSiHpOOYqZKwMcw5NYaRm4rAMdSst-a0bGnlzbB=
+4ngu-XtyB83-8pfH4trpBv9W5HC1l7cheP_RsaeXNsHieC75e3IHzf7yl8fi2ukG_1b66XH7ez1=
+z85hJJDWymUDzSHXQdYOnYvJn1CVseWn4mWCAKnSW_JoseeCH_TC8iCXh3oXBXvpg-hgQ6pZMAB=
+y68CLKgXCIoY7QBkOLOh2h57IpZ17aoYxa4lTdE4oR7V9eNUijYH6VIOkY7mMuz_VamQZBbU5mH=
+rb2Jx_e0odfFrZhpzGujj-q9jx15JAC5NJ-9Ch6MqCqXZrv2kCYvVAHMvnfK20j6xo7a2-g_wU6=
+lC7j4LfyLUjrBS5o8DWw7zU5nyWA3KtTb6NWN0on7RyATqQD8dhabxw2IGeSbXAACnOrnc_1KLZ=
+lj7drBut5GMZbwr_jYEt0FxUBitVDvO2hBifSgVdjO_9hq3DFtXeQscMp-kUDVGIqonebBH-vae=
+hfLron8eG-i4qwB3zlwFB3b1pHcE_q-qKqlIy7AyclE03upCX3VVF4var5ccEHpftKiG32QrZVM=
+T6pLoTbochHmI7waLDPeoKbMMm7hv4ZPoGoXrpJDB4ApglwCUhPnAxKwssH9IYmMsIpYGzBrtcv=
+CY9WGrPZF84Xy5tmHgjMfpU1d6qHzo0FfLyfS2HCVSMorv5GT5C8q033PNj3Nc1_VH6Io0XoMus=
+8whCpPOrU8xD7HWKB1fJUpIqOAwWa6s3zJ4E6OwYDv_gwVKdyJUGkmFXfATwql2cfc_53mYXeRw=
+=3D=3D" data-managed-link=3D"scaled_link_url" target=3D"_blank" data-link-i=
+d=3D"52dc91c1825611ef8204fd0cc47a9b88"><img agilecontent=3D"true" src=3D"ht=
+tps://mi=2Enfl=2Ecom/p/rp/81254e805016fbc9=2Epng?mi_u=3Dd2225b433129ef8b96e=
+6864a5c724177db71bfd73fcd6ab71dde415608d83f35&amp;mi_ecmp=3D1:1_NFL_Daily_N=
+ewsletter&amp;mi_favteam=3D&amp;mi_NFLPlusSub=3DN&amp;mi_NFLPlusSub_Annual=
+=3D&amp;mi_NFLPlusSub_Monthly=3D&amp;mi_NFLPlusSub_PremAnnual=3D&amp;mi_NFL=
+PlusSub_PremMonthly=3D&amp;mi_NFLPlusSub_FreeTrial=3D&amp;mi_NFLPlusSub_Lap=
+sedAnnual=3D&amp;mi_NFLPlusSub_LapsedMonthly=3D&amp;mi_NFLPlusSub_LapsedPre=
+mAnnual=3D&amp;mi_NFLPlusSub_LapsedPremMonthly=3D&amp;mi_NFLPlusSub_LapsedF=
+reeTrial=3D&amp;mi_extrapointsBPS=3D&amp;mi_extrapointscardholder=3D&amp;mi=
+_WK9REACQ=3D" alt=3D"tickets" width=3D"640" height=3D"auto" style=3D"displa=
+y: block; vertical-align: top" border=3D"0" class=3D"wrap"></a></td> </tr> =
+</tbody></table> </td> </tr> </tbody></table> </div> </section> <!-- End 1-=
+011: Scaled Image --> </td></tr></tbody></table></td></tr><tr><td><table ro=
+le=3D"presentation" bgcolor=3D"#CCCCCC" width=3D"640" border=3D"0" align=3D=
+"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"wrap"><tbody><tr><td =
+bgcolor=3D"#ffffff"><!-- Start 1-011: Scaled Image -->
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcd5/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVb=
+KLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwAL=
+GfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALr=
+eTHlAhLBxZ9_DV2acpL2slsrHCXM1FMs0NtyKJP3TBjyjs8Oth6us6SMwo0IXwzHhq0hFpRRV1N=
+f3zVwFdpXkKBqednkwIl5zONR9_s4_D5mGmKrWi-HZCHor7bXH6Nk7_6AEzT6JveU9KF6KSXa-K=
+y6slbNGHguSB-BNiaxv7dakt5CVIIT0dcn8i_qCBeD0gw0dzi6Wc9_gZPOBrc1YIbCFf0e_6bey=
+6Idz7CdOd4S83NQ04QRejavI5o6MCH45PpTaD8UZHiPuKQjm698XO3VEKu6udRAz78k5sDJ3DBd=
+Qi5itBusJw5iISj7xYaBoHfuGJAEuDexm_A0g6Gib_87O2zAbnpRWv8tDbZ4Fr9TSJ3XGKlAgNL=
+_u2mvmXF_-D_xeVzc_7C4jontHG14bM_lquMPmCTV0FncXT5iJvff8zrU80bAQAKLl2Pq2pF8Sj=
+gL2yp2IYaKCfySaip1-6bXplVpPN7k6uBbZFnEdocSh30yA3L2s6U27mrGlJWmeyAHX3FMxbWmF=
+t2g0glF06iWY9TvC5pen78X4Tb-fCm2aFlYpDNsCQ1dMIEmdyFrPEBr" data-managed-link=
+=3D"scaled_link_url" target=3D"_blank" data-link-id=3D"f3c63830693211efbbe3=
+af95f67ea08c"><img agilecontent=3D"true" src=3D"https://mi=2Enfl=2Ecom/p/rp=
+/714cf9d64b0e6748=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c724177db71bfd73fcd=
+6ab71dde415608d83f35&amp;mi_ecmp=3D1:1_NFL_Daily_Newsletter&amp;mi_fanage=
+=3D26" alt=3D"Products" width=3D"640" height=3D"auto" style=3D"display: blo=
+ck; vertical-align: top" border=3D"0" class=3D"wrap"></a></td> </tr> </tbod=
+y></table> </td> </tr> </tbody></table> </div> </section> <!-- End 1-011: S=
+caled Image --> </td></tr></tbody></table></td></tr><tr><td><table role=3D"=
+presentation" bgcolor=3D"#CCCCCC" width=3D"640" border=3D"0" align=3D"cente=
+r" cellpadding=3D"0" cellspacing=3D"0" class=3D"wrap"><tbody><tr><td bgcolo=
+r=3D"#ffffff"><!-- Start 1-011: Scaled Image -->
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcd6/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVb=
+KLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwAL=
+GfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALr=
+eTHlAhLBxZ9_DV2El088mrI3mkaa07qGVSyj3V9sjrLtljCTji6l8GiN4d1fbI6y7ZYwbvrHexa=
+pi_zufaVsfYIMVn1NadYTOpQwrcVVUQpRQ2KYSSQ1splA80h10HWDp2LykgbLv8bww2xb1xHEr8=
+okiNrEoh6TjmKmmXUJJRKwtHeu3fNgk56UpLAgOaDG0GonoJf633CcAJCxjfB20pdIsWY-piVPZ=
+6r_XdL5NaRoxUdES5N0wtSpEFvXEcSvyiSI2sSiHpOOYqZKwMcw5NYaRm4rAMdSst-a0bGnlzbB=
+4ngu-XtyB83-8pfH4trpBv9W5HC1l7cheP_RsaeXNsHieC75e3IHzf7yl8fi2ukG_1b66XH7ez1=
+z85hJJDWymUDzSHXQdYOnYvJn1CVseWn4mWCAKnSW_JoseeCH_TC8iCXh3oXBXvpg-hgQ6pZMAB=
+y68CLKgXCIoY7QBkOLOh2h57IpZ17aoYxa4lTdE4oR7V_zIbbSn6PY8W0u-jy1VXvQKJP3TBjyj=
+s8Oth6us6SMwo0IXwzHhq0hFpRRV1Nf3zUjAMH5wliVuhfC91nSmnhMSwwMb_GMae2rWi-HZCHo=
+r-VyI9Z77YTYh7VwzkvMPEeGwHFyZUhEu1bNGHguSB-BNiaxv7dakt5CVIIT0dcn8i_qCBeD0gw=
+0dzi6Wc9_gZPOBrc1YIbCFf0e_6bey6Idz7CdOd4S83NQ04QRejavI5o6MCH45PpTaD8UZHiPuK=
+Qjm698XO3VEKu6udRAz78k5sDJ3DBdQi5itBusJw5iISj7xYaBoHfuGJAEuDexm_A0g6Gib_87O=
+2zAbnpRWv8tDbZ4Fr9TSJ3XGKlAgNL_u2mvmXF_-D_xeVzc_7C4jontHG14bM_lquMPmCTV0Fnc=
+XT5iJvff8zrU80bAQAKLl2Pq2pF8SjgL2yp2IYaKCfySaip1-6bXplVpPN7k6uBbZFnEdocSh30=
+yA3L2s6U27mrGlJWmeyAHkpo-KlWM0owaTRrZGCab3jCca0IQznrf_50hAG8E-SK2hUcYuSIpw4=
+EmdyFrPEBr" data-managed-link=3D"scaled_link_url" target=3D"_blank" data-li=
+nk-id=3D"3935d640a10611efa46e83998717d263"><img agilecontent=3D"true" src=
+=3D"https://mi=2Enfl=2Ecom/p/rp/95bd9501e3dbbe4d=2Epng?mi_u=3Dd2225b433129e=
+f8b96e6864a5c724177db71bfd73fcd6ab71dde415608d83f35&amp;mi_ecmp=3D1:1_NFL_D=
+aily_Newsletter&amp;mi_favteam=3D&amp;mi_NFLPlusSub=3DN&amp;mi_NFLPlusSub_A=
+nnual=3D&amp;mi_NFLPlusSub_Monthly=3D&amp;mi_NFLPlusSub_PremAnnual=3D&amp;m=
+i_NFLPlusSub_PremMonthly=3D&amp;mi_NFLPlusSub_FreeTrial=3D&amp;mi_NFLPlusSu=
+b_LapsedAnnual=3D&amp;mi_NFLPlusSub_LapsedMonthly=3D&amp;mi_NFLPlusSub_Laps=
+edPremAnnual=3D&amp;mi_NFLPlusSub_LapsedPremMonthly=3D&amp;mi_NFLPlusSub_La=
+psedFreeTrial=3D&amp;mi_extrapointsBPS=3D&amp;mi_extrapointscardholder=3D&a=
+mp;mi_WK9REACQ=3D&amp;mi_NFLApp=3D" alt=3D"Products" width=3D"640" height=
+=3D"auto" style=3D"display: block; vertical-align: top" border=3D"0" class=
+=3D"wrap"></a></td> </tr> </tbody></table> </td> </tr> </tbody></table> </d=
+iv> </section> <!-- End 1-011: Scaled Image --> </td></tr></tbody></table><=
+/td></tr><tr><td><table role=3D"presentation" bgcolor=3D"#CCCCCC" width=3D"=
+640" border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"wrap"><tbody><tr><td bgcolor=3D"#ffffff"><!-- Start 2-003: Sliced Imag=
+e | x2 -->
+<section id=3D"2003_slice_x2" layout-row=3D"true"><div layout-row=3D"true"=
+><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff"> <tbody><tr layo=
+ut-row=3D"true"> <td align=3D"left" valign=3D"top" style=3D"padding: 0px 0p=
+x 0px 0px"> <table role=3D"presentation" width=3D"100%" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0"> <tbody><tr> <td align=3D"center" valign=3D"t=
+op" style=3D"padding: 0px 0px"> <table role=3D"presentation" width=3D"640" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"wrap"> <tbody><tr=
+> <th align=3D"left" valign=3D"top" data-groupid=3D"col1_scaled" style=3D"v=
+ertical-align: top; padding: 0px; font-weight: normal"> <a href=3D"https://=
+email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/1404144861d44cef0000=
+021ef3a0bcd7/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO=
+4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0k4e=
+Ff_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6izduGoF5=
+6h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmrqqbxRIshp=
+ljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV3_lGkv38w3vvQOOfX0RsWEH0bOcORVyOsWIKV=
+-tu5KLfY4OxdazyBYIdXxT1c4kqXBk27IKZHe5f7hfsNjkwSsH-fvSKwkux2N9AhLbFJQghS-mn=
+tPC4naTsAY9yft30X1kYFWZVLHpRBpQEvIN2ODrxAHEz00HlJ7JJXgrUnWkGkXr0QV7t2YXtHtv=
+3Sw9Ckgke2iJHfI2llNvg4VNiQ0was8hCpi6PogWNEeJAcPmhwXInhxWAv0XwbfKKnZ4Xq6B3_M=
+BIIKUujk9opfrv5s-eTK5HhLPopiE82ogBskmX_LuAPfvMqy7pds_vPMc0g0QwpeJXJqHowKm_f=
+I5jRZZFvUPL3GnIH0m5etyontd6eXtv3domqKqh5x5Mhat5ddBhufCuAkgT2iSnrrBrxtbulAu8=
+bF56A1rmCVRfsmdoMIJtRpDmS8KL_ZkrDfCJKPefUCkdC5uxCGwkOZI33tGpCzPlo0-vtvP6CM5=
+LUqCO3o_3Im7ZlcKBXPEe-nEKcts4jP23oclh0qkxVCUzlZmdnJJLNMVlm_YB8WxqopKg=3D=3D=
+" data-managed-link=3D"col1_scaled_link_url" target=3D"_blank" data-link-id=
+=3D"4eb1b240459711ed989cb3ad3ba55891"><img agilecontent=3D"true" src=3D"htt=
+ps://mi=2Enfl=2Ecom/p/rp/8a9a7787a5d04d54=2Epng?mi_u=3Dd2225b433129ef8b96e6=
+864a5c724177db71bfd73fcd6ab71dde415608d83f35&amp;mi_ecmp=3D1:1_NFL_Daily_Ne=
+wsletter" alt=3D"Vote" width=3D"320" height=3D"auto" style=3D"display: bloc=
+k" border=3D"0" class=3D"wrap"></a> </th> <th align=3D"left" valign=3D"top"=
+ data-groupid=3D"col2_scaled" style=3D"vertical-align: top; padding: 0px; f=
+ont-weight: normal"> <a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58=
+f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcd8/14041448-61d4-4cef-813=
+8-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjH=
+MDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-=
+HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi=
+3i6HMh50IgakrPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9=
+_DV3_lGkv38w3vvQOOfX0RsWEH0bOcORVyOsWIKV-tu5KLfY4OxdazyBYXlfvRA5UXDF0m-8ib-=
+BOqV5nOoCLzShqH-fvSKwkux3UuUKdVxdHzeN30yKif68MTsAY9yft30X1kYFWZVLHpRBpQEvIN=
+2ODrxAHEz00HlJ7JJXgrUnWkGkXr0QV7t2YXtHtv3Sw9Ckgke2iJHfI2llNvg4VNiQ0was8hCpi=
+6PogWNEeJAcPmhwXInhxWAv0XwbfKKnZ4Xq6B3_MBIIKUujk9opfrv5s-eTK5HhLPopiE82ogBs=
+kmX_LuAPfvMqy7pds_vPMc0g0QwpeJXJqHowKm_fI5jRZZFvUPL3GnIH0m5etyontd6eXtv3dom=
+qKqh5x5Mhat5ddBhufCuAkgT2iSnrrBrxtbulAu8bF56A1rmCVRfsmdoMIJtRpDmS8KL_ZkrDfC=
+JKPefUCkdC5uxCGwkOZI33tGpCzPlo0-vtvP6CM5LUqCOVfCnj3FWDGa8RFnm3QNXNRp9Hf-37A=
+kk_klAjRSGgrmdnJJLNMVlm_YB8WxqopKg=3D=3D" data-managed-link=3D"col2_scaled_=
+link_url" target=3D"_blank" data-link-id=3D"867c1350459711ed989cb3ad3ba5589=
+1"><img agilecontent=3D"true" src=3D"https://mi=2Enfl=2Ecom/p/rp/45e890ca17=
+e4c58f=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c724177db71bfd73fcd6ab71dde415=
+608d83f35&amp;mi_ecmp=3D1:1_NFL_Daily_Newsletter" alt=3D"Vote" width=3D"320=
+" height=3D"auto" style=3D"display: block" border=3D"0" class=3D"wrap"></a>=
+ </th> </tr> </tbody></table> </td> </tr> </tbody></table> </td> </tr> </tb=
+ody></table> </div> </section> <!-- End 2-003: Sliced Image | x2 --> </td><=
+/tr></tbody></table></td></tr><tr><td><table role=3D"presentation" bgcolor=
+=3D"#CCCCCC" width=3D"640" border=3D"0" align=3D"center" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"wrap"><tbody><tr><td bgcolor=3D"#ffffff"><!-- St=
+art 1-011: Scaled Image -->
+<section id=3D"1011_scaled_image" layout-row=3D"true"><div layout-row=3D"t=
+rue"><table layout-row=3D"true" role=3D"presentation" width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#ffffff"> <tbody><tr =
+layout-row=3D"true"> <td valign=3D"top" align=3D"left"> <table role=3D"pres=
+entation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"wrap"> <tbody><tr> <td align=3D"center" style=3D"padding: 0px 0px 0=
+px 0px" data-groupid=3D"scaled"><a href=3D"https://email=2Enfl=2Ecom/T/v600=
+00019929d58f929ac2f56e96c65848/1404144861d44cef0000021ef3a0bcd9/14041448-61=
+d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=
+=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVb=
+KLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwAL=
+GfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALr=
+eTHlAhLBxZ9_DV2El088mrI3mkaa07qGVSyj-f4J-8kq1EIw8NQeJr1nWsRdRJl-IGM_jpzdh74=
+3OglNzzhSrbNrZHngh_0wvIglhWPkR09qiaz93D-yo40EZo7-sod1-OeQUtCFooPuFGDGm4OTY4=
+mjUbAgOaDG0GonfeZabA6nroyYSSQ1splA81hf4prdVhszEvJhNtN2uJcP2518Y0fYJgNtRSVis=
+m2JEejdnWMLrd-F1IQJZlXFByM6oUW0YthaK6TwZfmNR4KHPtUR1APiFfQMLPtEWo6dDP_auDyw=
+v7zBpNaKboRflQgWXpWLqdcm2zhKPdHEIcbnRs4BDlitBxEorY95k1-rVLmVl5DC6ncvpC5ssLV=
+nvEb-Bi-VX3G9BLi34Z2l52by-nXERnaFjZ3iaNDRMchlLzH5QIWHC5TKkIkV2jWu4ze7xi7Zv_=
+cjCLCjY_6m1DkvfU4Wbpj8yjgCWiHkjxnW3CO9rYIZELOCsLr_-lNFmrG5HX5Iz3_yQLdg9Z-QS=
+oL_bvffTN2cBUnZBWiOU1pyXGKXmOB5XEsDprNxmPL_8S89a0z3FzcfoohF8UlbX_yATXcIXJrd=
+0NqWXewotuHSTQqaPDeB_NEwv0qzDb3agKNPUJhp1Dp5afJgR8KwrTVwgdK4z-IRBiy4dpqOnHn=
+6lELmwtC-_8pzmOCTB0CYUVgQvt8J5Vk_iKKB-wIOm9GD9bk2PzjX5pOQcsaqf4e9eBMU-15vn-=
+0=3D" data-managed-link=3D"scaled_link_url" target=3D"_blank" data-link-id=
+=3D"e2966830dd3011ed8993414dc471df05"><img agilecontent=3D"true" src=3D"htt=
+ps://mi=2Enfl=2Ecom/p/rp/a1228788f0a1d0a0=2Epng?mi_u=3Dd2225b433129ef8b96e6=
+864a5c724177db71bfd73fcd6ab71dde415608d83f35&amp;mi_ecmp=3D1:1_NFL_Daily_Ne=
+wsletter&amp;mi_favteam=3D&amp;mi_fanage=3D26&amp;mi_probability=3D&amp;adT=
+ype=3Dpartner&amp;mi_extrapointscardholder=3D&amp;mi_NFLPlusHighRisk=3D&amp=
+;mi_NFLPlusMedRisk=3D&amp;mi_NFLPlusLowRisk=3D" alt=3D"Banner" width=3D"640=
+" height=3D"auto" style=3D"display: block; vertical-align: top" border=3D"0=
+" class=3D"wrap"></a></td> </tr> </tbody></table> </td> </tr> </tbody></tab=
+le> </div> </section> <!-- End 1-011: Scaled Image --> </td></tr><tr><td bg=
+color=3D"#FFFFFF"><!-- Start 1-000: Spacer --><section id=3D"1000" layout-r=
+ow=3D"true"><div layout-row=3D"true"><table layout-row=3D"true" role=3D"pre=
+sentation" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+bgcolor=3D"#FFFFFF"> <tbody><tr layout-row=3D"true"> <td> <table role=3D"pr=
+esentation" width=3D"100%" border=3D"0" cellspacing=3D"0"> <tbody><tr> <td =
+height=3D"5" align=3D"left" valign=3D"top" bgcolor=3D"#FFFFFF" style=3D"lin=
+e-height: 0px; padding: 0px;"><img src=3D"https://images=2Eharmony=2Eepsilo=
+n=2Ecom/ContentHandler/images?id=3D3f67ada7-a01e-4c02-ab71-8b46fd3106ae" he=
+ight=3D"5" style=3D"display: block; height: 5px" border=3D"0" alt=3D""></td=
+> </tr> </tbody></table> </td> </tr> </tbody></table> </div> </section> <!-=
+- End 1-000: Spacer --> </td></tr></tbody></table></td></tr><tr><td><table =
+role=3D"presentation" bgcolor=3D"#CCCCCC" width=3D"640" border=3D"0" align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"wrap"><tbody><tr><=
+td align=3D"center" style=3D"font-size:14px"><table role=3D"presentation" w=
+idth=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>=20
+    <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start PERSONALIZED CLUB NEWS =
+HEADER --><a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e=
+96c65848/1404144861d44cef0000021ef3a0bcda/14041448-61d4-4cef-8138-e2ec7584f=
+57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tv=
+iDHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvV=
+yEsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50Iga=
+krPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV3Pv3RTMs=
+CYCXOhNRtkQg_ibFCFnM25XVWkpIoG1HsdFVA3m8BwVbTAERzToHht2NwHb9fmVnbVmCYXtgYcG=
+FBZDhVoqKWYVX6-5oNoK1m4sItrw9lM5yIUZZR8xjLAGYtpxmr1RdWkxMUOci9czTouqGUdhaC7=
+-pNpzsLuXV8nVMWW3m80yMHafdtLvLqqyYdMXrigwu0mjYwEnm5mvaAcz7vg-bwzMlVznmjEYqE=
+Uri4FLktZZhOjWU2-DhU2JDTBqzyEKmLo-iBY0R4kBw-aHBcieHFYC_RfBt8oqdnheroHf8wEgg=
+pS6OT2il-u_mz55MrkeEs-imITzaiAGySZf8u4A9-8yrLul2z-88xzSDRDCl4lcmoejAqb98jmN=
+FlkW9Q8vcacgfSbl63Kie13p5e2_d2iaoqqHnHkyFq3l10GG58K4CSBPaJKeusGvG1u6UC7xsXn=
+oDWuYJVF-yZ2gwgm1GkOZLwov9mSsN8Iko959QKR0Lm7EIbCQ5kjfe0akLM-WjT6-28_oIzktSo=
+I15MPr2yPN7lsVGWdD4zE2hUcW-vTlMLXCBG5ISdB8h-Z2ckks0xWWb9gHxbGqikq" target=
+=3D"_blank"><img src=3D"https://mi=2Enfl=2Ecom/p/rp/520c1880e357fffd=2Epng?=
+mi_u=3Dd2225b433129ef8b96e6864a5c724177db71bfd73fcd6ab71dde415608d83f35&mi_=
+ecmp=3D1:1_NFL_Daily_Newsletter&mi_firstname=3DAdhar&mi_favteam=3D" class=
+=3D"wrap" alt=3D"CLUB NEWS" border=3D"0" style=3D"display: block" width=3D"=
+640" height=3D"auto"></a><!-- End PERSONALIZED CLUB NEWS HEADER --></td>
+    </tr>
+    <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start PERSONALIZED CLUB NEWS =
+SCORE --><a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e9=
+6c65848/1404144861d44cef0000021ef3a0bcdb/14041448-61d4-4cef-8138-e2ec7584f5=
+7e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tvi=
+DHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVy=
+EsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50Igak=
+rPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV3Pv3RTMsC=
+YCXOhNRtkQg_ibFCFnM25XVX0iq_fyrgkaFr8fD5G3-L4hP4nUMwo-qkP2518Y0fYJgNtRSVism=
+2JEejdnWMLrd-F1IQJZlXFByDIb7MxUn8TmJgVThWoFpHcZA1DsNhqaqFOucnh-umaVs0YeC5IH=
+4E2JrG_t1qS3kJUghPR1yfyL-oIF4PSDDR3OLpZz3-Bk84GtzVghsIVGIKfn1No5ofGLfypOjV7=
+SuJEgB9j2krrdsIODyV8usHq4iVTzGWRIrsw1sXbaaInNsPBN23P_xJlKG413xCOTFHlkC6wMhM=
+7ZxjehtSgim0SaYwK0VJBneY7zzIUYcwsI3o0ZxtzpdArj9Wj9TKTugYoga6DAyyGELj7wZ2XG8=
+pS9Y0UmRSVTOwefmcwmpLzy7J9nJA8cam0ubu6vrK5bxLdd5Ncm0idY2nDlbOPAyuY0YlDSkmE1=
+t05fcZZ_JSqsfYf9BdCCdXoZWG1CsRhY_XZXz5H03wFni3-yOkxR6DSbrWLahqPIn-_SPjEZ_Nx=
+YQ1QO7vO1GNgZaeVXv2hvCHw9Yl8aoUy1rVNQewrmuQ=3D" target=3D"_blank"><img src=
+=3D"https://mi=2Enfl=2Ecom/p/rp/3a18097a45a44ffe=2Epng?mi_u=3Dd2225b433129e=
+f8b96e6864a5c724177db71bfd73fcd6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Daily=
+_Newsletter&mi_firstname=3DAdhar&mi_favTeam=3D&mi_fav_team=3D" class=3D"wra=
+p" alt=3D"CLUB SCORE" border=3D"0" style=3D"display: block" width=3D"640" h=
+eight=3D"auto"></a><!-- End PERSONALIZED CLUB NEWS SCORE --></td>
+    </tr>
+    <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start CLUB NEWS 1 --><a href=
+=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/14041448=
+61d44cef0000021ef3a0bcdc/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4=
+RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCC=
+PvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9Tbktc=
+Q4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZ=
+NmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV2El088mrI3moT-J1DMKPqpD9u=
+dfGNH2CYDbUUlYrJtiRHo3Z1jC63fhdSECWZVxQcTTQndITcuboxXWAyvrKBYg_CD0BKG8KT0DC=
+z7RFqOnWoq3k1VnRteGB55jfYlKQ4wwf7ahF9wDts4Sj3RxCHG50bOAQ5YrQcRKK2PeZNfq1S5l=
+ZeQwup3L6QubLC1Z7xG_gYvlV9xvVE6gUMGGtRRmvo7d6ZXJIhQ04QRejavI5o6MCH45PpTaD8U=
+ZHiPuKQjm698XO3VEKu6udRAz78k5sDJ3DBdQi5itBusJw5iISj7xYaBoHfuGJAEuDexm_A0g6G=
+ib_87O2zAbnpRWv8tDbZ4Fr9TSJ3XGKlAgNL_u2mvmXF_-D_xeVzc_7C4jontHG14bM_lquMPmC=
+TV0FncXT5iJvff8zrU80bAQAKLl2Pq2pF8SjgL2yp2IYaKCfySaip1-6bXplVpPN7k6uBbZFnEd=
+ocSh30yA3L2s6U27mrGlJWmeyAHlZMm8Y8_eM70GFM_m0b9D9-TVoBDUDfmn0FUelHur2iW_JOV=
+M1XzOoEmdyFrPEBr" target=3D"_blank"><img src=3D"https://mi=2Enfl=2Ecom/p/rp=
+/79cedb3917ded08a=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c724177db71bfd73fcd=
+6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Daily_Newsletter&mi_favteam=3D" clas=
+s=3D"wrap" alt=3D"CLUB NEWS 1" border=3D"0" style=3D"display: block" width=
+=3D"640" height=3D"auto"></a><!-- End CLUB NEWS 1 --></td>
+    </tr>
+    <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start CLUB NEWS 2 --><a href=
+=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/14041448=
+61d44cef0000021ef3a0bcdd/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4=
+RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCC=
+PvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9Tbktc=
+Q4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZ=
+NmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV2El088mrI3moT-J1DMKPqpD9u=
+dfGNH2CYDbUUlYrJtiRHo3Z1jC63fhdSECWZVxQd08Sy0YqmbgjMiZ4Nti17yO6dx4OX2M4H0DC=
+z7RFqOndQRQcuUfpBMlrv2A6D2uCZZRaes4fxN5Ns4Sj3RxCHG50bOAQ5YrQcRKK2PeZNfq1S5l=
+ZeQwup3L6QubLC1Z7xG_gYvlV9xvVE6gUMGGtRRmvo7d6ZXJIhQ04QRejavI5o6MCH45PpTaD8U=
+ZHiPuKQjm698XO3VEKu6udRAz78k5sDJ3DBdQi5itBusJw5iISj7xYaBoHfuGJAEuDexm_A0g6G=
+ib_87O2zAbnpRWv8tDbZ4Fr9TSJ3XGKlAgNL_u2mvmXF_-D_xeVzc_7C4jontHG14bM_lquMPmC=
+TV0FncXT5iJvff8zrU80bAQAKLl2Pq2pF8SjgL2yp2IYaKCfySaip1-6bXplVpPN7k6uBbZFnEd=
+ocSh30yA3L2s6U27mrGlJWmeyAH50-Tba_bji3nEZAuiEhRg5Ic0_BaOiQhqTIz19tTHXEyHoJZ=
+1rg1dIEmdyFrPEBr" target=3D"_blank"><img src=3D"https://mi=2Enfl=2Ecom/p/rp=
+/eb832253f33eb8cf=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c724177db71bfd73fcd=
+6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Daily_Newsletter&mi_favteam=3D" clas=
+s=3D"wrap" alt=3D"CLUB NEWS 2" border=3D"0" style=3D"display: block" width=
+=3D"640" height=3D"auto"></a><!-- End CLUB NEWS 2 --></td>
+    </tr>
+    <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start CLUB NEWS 3 --><a href=
+=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/14041448=
+61d44cef0000021ef3a0bcde/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4=
+RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCC=
+PvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9Tbktc=
+Q4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZ=
+NmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV2El088mrI3moT-J1DMKPqpD9u=
+dfGNH2CYDbUUlYrJtiRHo3Z1jC63fhdSECWZVxQce1XVdI5h_AJCZNW9Q3mOgl-mR6234zjv0DC=
+z7RFqOnQmeMtkbKQjJFcbmx-jIivo0gun1JMQCqds4Sj3RxCHG50bOAQ5YrQcRKK2PeZNfq1S5l=
+ZeQwup3L6QubLC1Z7xG_gYvlV9xvVE6gUMGGtRRmvo7d6ZXJIhQ04QRejavI5o6MCH45PpTaD8U=
+ZHiPuKQjm698XO3VEKu6udRAz78k5sDJ3DBdQi5itBusJw5iISj7xYaBoHfuGJAEuDexm_A0g6G=
+ib_87O2zAbnpRWv8tDbZ4Fr9TSJ3XGKlAgNL_u2mvmXF_-D_xeVzc_7C4jontHG14bM_lquMPmC=
+TV0FncXT5iJvff8zrU80bAQAKLl2Pq2pF8SjgL2yp2IYaKCfySaip1-6bXplVpPN7k6uBbZFnEd=
+ocSh30yA3L2s6U27mrGlJWmeyAH9E5WbMRz3THjEeHcE8Xe5z4LYqNWtdp6GEovW-wKAbEzKt5-=
+IVYAdoEmdyFrPEBr" target=3D"_blank"><img src=3D"https://mi=2Enfl=2Ecom/p/rp=
+/f948e105a0a06978=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c724177db71bfd73fcd=
+6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Daily_Newsletter&mi_favteam=3D" clas=
+s=3D"wrap" alt=3D"CLUB NEWS 3" border=3D"0" style=3D"display: block" width=
+=3D"640" height=3D"auto"></a><!-- End CLUB NEWS 3 --></td>
+    </tr>   =20
+        <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start CLUB NEWS 4 --><a href=
+=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/14041448=
+61d44cef0000021ef3a0bcdf/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4=
+RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCC=
+PvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9Tbktc=
+Q4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZ=
+NmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV2El088mrI3moT-J1DMKPqpD9u=
+dfGNH2CYDbUUlYrJtiRHo3Z1jC63fhdSECWZVxQdXhzjFiIdPOK1-2QhD_WdAfOXcHth_K8T0DC=
+z7RFqOnXqJZd7xBAdDOFCvLBJhH16ReCVfG3ig-9s4Sj3RxCHG50bOAQ5YrQcRKK2PeZNfq1S5l=
+ZeQwup3L6QubLC1Z7xG_gYvlV9xvVE6gUMGGtRRmvo7d6ZXJIhQ04QRejavI5o6MCH45PpTaD8U=
+ZHiPuKQjm698XO3VEKu6udRAz78k5sDJ3DBdQi5itBusJw5iISj7xYaBoHfuGJAEuDexm_A0g6G=
+ib_87O2zAbnpRWv8tDbZ4Fr9TSJ3XGKlAgNL_u2mvmXF_-D_xeVzc_7C4jontHG14bM_lquMPmC=
+TV0FncXT5iJvff8zrU80bAQAKLl2Pq2pF8SjgL2yp2IYaKCfySaip1-6bXplVpPN7k6uBbZFnEd=
+ocSh30yA3L2s6U27mrGlJWmeyAH16YCdQvihJOoJvIgyOcq7ZqsZhcgNWtc4Lbsbj1KfJDgxqYo=
+d0XW74EmdyFrPEBr" target=3D"_blank"><img src=3D"https://mi=2Enfl=2Ecom/p/rp=
+/fe60c9700713a0cf=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c724177db71bfd73fcd=
+6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Daily_Newsletter&mi_favteam=3D" clas=
+s=3D"wrap" alt=3D"CLUB NEWS 4" border=3D"0" style=3D"display: block" width=
+=3D"640" height=3D"auto"></a><!-- End CLUB NEWS 4 --></td>
+    </tr>   =20
+    <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start PERSONALIZED SCHEDULE H=
+EADER --><a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e9=
+6c65848/1404144861d44cef0000021ef3a0bce0/14041448-61d4-4cef-8138-e2ec7584f5=
+7e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tvi=
+DHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVy=
+EsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50Igak=
+rPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV3Pv3RTMsC=
+YCXOhNRtkQg_ibFCFnM25XVX0iq_fyrgkaFr8fD5G3-L4hP4nUMwo-qkP2518Y0fYJgNtRSVism=
+2JEejdnWMLrd-F1IQJZlXFB37omYNHUJjbRawNFwDZsv82etdkndSPUKFOucnh-umaVs0YeC5IH=
+4E2JrG_t1qS3kJUghPR1yfyL-oIF4PSDDR3OLpZz3-Bk84GtzVghsIVGIKfn1No5ofGLfypOjV7=
+SuJEgB9j2krrdsIODyV8usHq4iVTzGWRIrsw1sXbaaInNsPBN23P_xJlKG413xCOTFHlkC6wMhM=
+7ZxjehtSgim0SaYwK0VJBneY7zzIUYcwsI3o0ZxtzpdArj9Wj9TKTugYoga6DAyyGELj7wZ2XG8=
+pS9Y0UmRSVTOwefmcwmpLzy7J9nJA8cam0ubu6vrK5bxLdd5Ncm0idY2nDlbOPAyuY0YlDSkmE1=
+t05fcZZ_JSqsfYf9BdCCdXoZWG1CsRhY_XZXz5H03wFni3-yOkxR6D4Sz1sp19Sk9nPaJF1N_ht=
+dNG2UfcoQswKzitmT1_mvVt3o6LQAtfv1rVNQewrmuQ=3D" target=3D"_blank"><img src=
+=3D"https://mi=2Enfl=2Ecom/p/rp/35bb3c18c4942159=2Epng?mi_u=3Dd2225b433129e=
+f8b96e6864a5c724177db71bfd73fcd6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Daily=
+_Newsletter&mi_firstname=3DAdhar&mi_favTeam=3D&mi_fav_team=3D" class=3D"wra=
+p" alt=3D"TEAM SCHEDULE" border=3D"0" style=3D"display: block" width=3D"640=
+" height=3D"auto"></a><!-- End PERSONALIZED SCHEDULE HEADER --></td>
+    </tr>
+    <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start PERSONALIZED SCHEDULE G=
+AME 1 --><a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e9=
+6c65848/1404144861d44cef0000021ef3a0bce1/14041448-61d4-4cef-8138-e2ec7584f5=
+7e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tvi=
+DHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVy=
+EsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50Igak=
+rPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV14wOi_XQE=
+k_cvHFP6NVatlU_ftOpx4ZCcgNJpyW_c9PymLRIVcStYudzp6iRZWkk3GreOoL_aso_8KVH9jVE=
+aKnve1qadPiQBqPBVRWCcP5uUtuVJfjRQqac7C7l1fJ1TFlt5vNMjB2n3bS7y6qsmHTF64oMLtJ=
+o2MBJ5uZr2gHM-74Pm8MzJVc55oxGKhFK4uBS5LWWYTo1lNvg4VNiQ0was8hCpi6PogWNEeJAcP=
+mhwXInhxWAv0XwbfKKnZ4Xq6B3_MBIIKUujk9opfrv5s-eTK5HhLPopiE82ogBskmX_LuAPfvMq=
+y7pds_vPMc0g0QwpeJXJqHowKm_fI5jRZZFvUPL3GnIH0m5etyontd6eXtv3domqKqh5x5Mhat5=
+ddBhufCuAkgT2iSnrrBrxtbulAu8bF56A1rmCVRfsmdoMIJtRpDmS8KL_ZkrDfCJKPefUCkdC5u=
+xCGwkOZI33tGpCzPlo0-vtvP6CM5LUqCHdYfbXFojJX_6GrCOQnvNS6PMzxeqCHxTgLV6OWkmun=
+mdnJJLNMVlm_YB8WxqopKg=3D=3D" target=3D"_blank"><img src=3D"https://mi=2Enf=
+l=2Ecom/p/rp/20b90431802fab6e=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c724177=
+db71bfd73fcd6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Daily_Newsletter&favTeam=
+=3D&mi_fav_team=3D" class=3D"wrap" alt=3D"TEAM GAME 1" border=3D"0" style=
+=3D"display: block" width=3D"640" height=3D"auto"></a><!-- End PERSONALIZED=
+ SCHEDULE GAME 1 --></td>
+    </tr>
+    <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start PERSONALIZED SCHEDULE G=
+AME 2 --><a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e9=
+6c65848/1404144861d44cef0000021ef3a0bce2/14041448-61d4-4cef-8138-e2ec7584f5=
+7e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tvi=
+DHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVy=
+EsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50Igak=
+rPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV14wOi_XQE=
+k_cvHFP6NVatlU_ftOpx4ZCcgNJpyW_c9PymLRIVcStYudzp6iRZWkk3GreOoL_aso-QiD80Hyl=
+KTT3_srOiVR64iYqxkmTA6TeUtuVJfjRQqac7C7l1fJ1TFlt5vNMjB2n3bS7y6qsmHTF64oMLtJ=
+o2MBJ5uZr2gHM-74Pm8MzJVc55oxGKhFK4uBS5LWWYTo1lNvg4VNiQ0was8hCpi6PogWNEeJAcP=
+mhwXInhxWAv0XwbfKKnZ4Xq6B3_MBIIKUujk9opfrv5s-eTK5HhLPopiE82ogBskmX_LuAPfvMq=
+y7pds_vPMc0g0QwpeJXJqHowKm_fI5jRZZFvUPL3GnIH0m5etyontd6eXtv3domqKqh5x5Mhat5=
+ddBhufCuAkgT2iSnrrBrxtbulAu8bF56A1rmCVRfsmdoMIJtRpDmS8KL_ZkrDfCJKPefUCkdC5u=
+xCGwkOZI33tGpCzPlo0-vtvP6CM5LUqCBwyuxgbGTkzJRhsX2pEKHpq4gHN6HZ_u4blwu7MZQnJ=
+mdnJJLNMVlm_YB8WxqopKg=3D=3D" target=3D"_blank"><img src=3D"https://mi=2Enf=
+l=2Ecom/p/rp/56258c456442ec3b=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c724177=
+db71bfd73fcd6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Daily_Newsletter&favTeam=
+=3D&mi_fav_team=3D" class=3D"wrap" alt=3D"TEAM GAME 2" border=3D"0" style=
+=3D"display: block" width=3D"640" height=3D"auto"></a><!-- End PERSONALIZED=
+ SCHEDULE GAME 2 --></td>
+    </tr>
+    <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start PERSONALIZED SCHEDULE G=
+AME 3 --><a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e9=
+6c65848/1404144861d44cef0000021ef3a0bce3/14041448-61d4-4cef-8138-e2ec7584f5=
+7e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tvi=
+DHXIoXcPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVy=
+EsiX5808Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50Igak=
+rPQu9SwM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV14wOi_XQE=
+k_cvHFP6NVatlU_ftOpx4ZCcgNJpyW_c9PymLRIVcStYudzp6iRZWkk3GreOoL_asoy-DGKnKL5=
+zZyVpo1OHVL8KYpcg4f-102OUtuVJfjRQqac7C7l1fJ1TFlt5vNMjB2n3bS7y6qsmHTF64oMLtJ=
+o2MBJ5uZr2gHM-74Pm8MzJVc55oxGKhFK4uBS5LWWYTo1lNvg4VNiQ0was8hCpi6PogWNEeJAcP=
+mhwXInhxWAv0XwbfKKnZ4Xq6B3_MBIIKUujk9opfrv5s-eTK5HhLPopiE82ogBskmX_LuAPfvMq=
+y7pds_vPMc0g0QwpeJXJqHowKm_fI5jRZZFvUPL3GnIH0m5etyontd6eXtv3domqKqh5x5Mhat5=
+ddBhufCuAkgT2iSnrrBrxtbulAu8bF56A1rmCVRfsmdoMIJtRpDmS8KL_ZkrDfCJKPefUCkdC5u=
+xCGwkOZI33tGpCzPlo0-vtvP6CM5LUqCKDA-2QWDFx8jVKcnyDIgNRO8aMTepRdc7G8qQMvk227=
+mdnJJLNMVlm_YB8WxqopKg=3D=3D" target=3D"_blank"><img src=3D"https://mi=2Enf=
+l=2Ecom/p/rp/fc14cc6282a2aba9=2Epng?mi_u=3Dd2225b433129ef8b96e6864a5c724177=
+db71bfd73fcd6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Daily_Newsletter&favTeam=
+=3D&mi_fav_team=3D" class=3D"wrap" alt=3D"TEAM GAME 3" border=3D"0" style=
+=3D"display: block" width=3D"640" height=3D"auto"></a><!-- End PERSONALIZED=
+ SCHEDULE GAME 3 --></td>
+    </tr>
+     <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start EXTRA POINTS Block --><=
+a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/14=
+04144861d44cef0000021ef3a0bce4/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=
+=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPx=
+vDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVyEsiX5808E=
+h9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50IgakrPQu9SwM5=
+azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV154If9MLyIJeHehcFe=
+-mD6GBDqlkwAHLrwIsqBcIihjtAGQ4s6HaHnsilnXtqhjFqz3ivcOuTin52-U9_DcVurD9q-Kf9=
+b7xxpqpTSWxaH7Y6HUqVZiQthx91-DBYd9JWc6T0qsr6N_lpMTJ4GG45ID9udfGNH2CYDbUUlYr=
+JtiRHo3Z1jC63fhdSECWZVxQeIhRgz0Izb9zac4nMGt1dVzMpWqNihkeL0DCz7RFqOnfBOxTUiq=
+kEJg973L_gjAOchuAKwULQcYNs4Sj3RxCHG50bOAQ5YrQcRKK2PeZNfq1S5lZeQwup3L6QubLC1=
+Z7xG_gYvlV9xvVE6gUMGGtRRmvo7d6ZXJIhQ04QRejavI5o6MCH45PpTaD8UZHiPuKQjm698XO3=
+VEKu6udRAz78k5sDJ3DBdQi5itBusJw5iISj7xYaBoHfuGJAEuDexm_A0g6Gib_87O2zAbnpRWv=
+8tDbZ4Fr9TSJ3XGKlAgNL_u2mvmXF_-D_xeVzc_7C4jontHG14bM_lquMPmCTV0FncXT5iJvff8=
+zrU80bAQAKLl2Pq2pF8SjgL2yp2IYaKCfySaip1-6bXplVpPN7k6uBbZFnEdocSh30yA3L2s6U2=
+7mrGlJWmeyAH74qoj95clYIMSAesweDNmmtp473IZJMoL08vx3ar5DgmOVwabSGPx4EmdyFrPEB=
+r" target=3D"_blank">
+        <img src=3D"https://mi=2Enfl=2Ecom/p/rp/266b2887043c7b28=2Epng?mi_=
+u=3Dd2225b433129ef8b96e6864a5c724177db71bfd73fcd6ab71dde415608d83f35&mi_ecm=
+p=3D1:1_NFL_Daily_Newsletter&mi_extrapointsBPS=3D&mi_extrapointscardholder=
+=3D&mi_fav_team=3D&mi_firstname_BPS=3D&mi_lastname_BPS=3D&mi_clubsource=3D"=
+ class=3D"wrap" alt=3D"NFL EXTRA POINTS" border=3D"0" style=3D"display: blo=
+ck" width=3D"640" height=3D"auto"></a><!-- End EXTRA POINTS Block --></td>
+    </tr>  =20
+     <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start Team-Specific Ad Block =
+--><a href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c6584=
+8/1404144861d44cef0000021ef3a0bce5/14041448-61d4-4cef-8138-e2ec7584f57e?__d=
+U__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoX=
+cPxvDgUUCCPvXMWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVyEsiX58=
+08Eh9TbktcQ4E6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50IgakrPQu9S=
+wM5azDvLWZNmrqqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV2El088mrI3mkaa0=
+7qGVSyj-f4J-8kq1EIw8NQeJr1nWsRdRJl-IGM_fVx8r4Vhsw8NLnGalWGzr3Q4K-IsymOnXu_V=
+aUVpzVhGybMyhQxGR4c-dCThWTVkIOv-APlKK2cv9-baStxq1wUuaPA1sO81OZ8lgNyrU2-jVjd=
+KJ-0cgE6kA_HYWm8cNiBnkm1wAApzq53P9Si2ZY-3awbreRjGlpP23WTJaFfLWztKdCLkt0pOFF=
+nWR_RfyiLXCpjIRMtj_1y53thEsGZ0WbQUGHb0lcWeFTpFfqUgXDWXPE9UmB9jcGB5mAh5NAxyV=
+ImkYLYbhEEpNeDYa3deL3LA1f9fdly4dCrDF6AjA_VMVkcMxHPEsbEqIIEyv3S0_q7F9v5a99Ww=
+1aPuTQLjrRVMNVLlxay9iMB-xL-7xAO-1_5Rr3zY31O4J9gTN9S1dLNQ8f01ZfX9nqxcr0BnohG=
+Y96b4Yw0EuFM9Uo7iZqaNCAURKOKUKgFROBpaOSEJRMY51o-cF-MQEjJqCTPqWluhEtxlAS7WqT=
+lEu6bkTXUAzsvGM8cPqkrirm1wGjIiZPhLfb8=3D" target=3D"_blank"><img src=3D"htt=
+ps://mi=2Enfl=2Ecom/p/rp/7d4e211f6005caee=2Epng?mi_u=3Dd2225b433129ef8b96e6=
+864a5c724177db71bfd73fcd6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Daily_Newsle=
+tter&mi_favteam=3D&mi_fanage=3D26&mi_probability=3D" class=3D"wrap" alt=3D"=
+NFL GAME PASS" border=3D"0" style=3D"display: block" width=3D"640" height=
+=3D"auto"></a><!-- End BANNER 2 --></td>
+    </tr>       =20
+        <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start PODCAST --><a href=3D"h=
+ttps://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/1404144861d44=
+cef0000021ef3a0bce6/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTX=
+g2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMW=
+oX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6i=
+zduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmrqq=
+bxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV3_lGkv38w3vvQOOfX0RsWEH0bOcORV=
+yOsWIKV-tu5KLfY4OxdazyBYIFv9dTR9oCaHQgATcMnExap2Ionbc5idK62egPLDnLLe1tNnCrj=
+1HLbuMdHxonpphosCzDvpU_DImCE_1JwGJMr_Wupyec2b36dO8mVOUkkakLM-WjT6-xUBitVDvO=
+2hBifSgVdjO_9hq3DFtXeQscMp-kUDVGIqonebBH-vaehfLron8eG-i4qwB3zlwFB3b1pHcE_q-=
+qKqlIy7AyclE03upCX3VVF4var5ccEHpftKiG32QrZVMT6pLoTbochHmI7waLDPeoKbMMm7hv4Z=
+PoGoXrpJDB4ApglwCUhPnAxKwssH9IYmMsIpYGzBrtcvCY9WGrPZF84Xy5tmHgjMfpU1d6qHzo0=
+FfLyfS2HCVSMorv5GT5C8q033PNj3Nc1_VH6Io0XoMus8whCpPOrU8yJ0s9XzZLwT-iMpJwrfVS=
+BiBBTOqCcl67TXVEtxAlvzEGDtadPzM6kfc_53mYXeRw=3D=3D" style=3D"display: block=
+"><img alt=3D"NFL podcast" style=3D"border: 0; display: block;" border=3D"0=
+" src=3D"https://mi=2Enfl=2Ecom/p/rp/f420a22edfb6faae=2Epng?mi_u=3Dd2225b43=
+3129ef8b96e6864a5c724177db71bfd73fcd6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_=
+Daily_Newsletter" class=3D"wrap" alt=3D"NFL Podcast" border=3D"0" style=3D"=
+display: block" width=3D"640" height=3D"auto"></a><!-- End PODCAST --></td>
+    </tr>       =20
+   =20
+    <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start TWITTER --><a href=3D"h=
+ttps://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/1404144861d44=
+cef0000021ef3a0bce7/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTX=
+g2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMW=
+oX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6i=
+zduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmrqq=
+bxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV3_lGkv38w3vvQOOfX0RsWEH0bOcORV=
+yOsWIKV-tu5KLfY4OxdazyBYQ1OYnX6uLCkEuONzB2cRyzlJSuZFHEaoK62egPLDnLLe1tNnCrj=
+1HLbuMdHxonpphosCzDvpU_DImCE_1JwGJMr_Wupyec2b36dO8mVOUkkakLM-WjT6-xUBitVDvO=
+2hBifSgVdjO_9hq3DFtXeQscMp-kUDVGIqonebBH-vaehfLron8eG-i4qwB3zlwFB3b1pHcE_q-=
+qKqlIy7AyclE03upCX3VVF4var5ccEHpftKiG32QrZVMT6pLoTbochHmI7waLDPeoKbMMm7hv4Z=
+PoGoXrpJDB4ApglwCUhPnAxKwssH9IYmMsIpYGzBrtcvCY9WGrPZF84Xy5tmHgjMfpU1d6qHzo0=
+FfLyfS2HCVSMorv5GT5C8q033PNj3Nc1_VH6Io0XoMus8whCpPOrU86I6NhV1LgELCaz9B8qQR2=
+9MUKcgJddgO4O5eT1iA0hpcKOBAeHDxHwfc_53mYXeRw=3D=3D" target=3D"_blank"><img =
+src=3D"https://mi=2Enfl=2Ecom/p/rp/12022841a1935abb=2Epng?mi_u=3Dd2225b4331=
+29ef8b96e6864a5c724177db71bfd73fcd6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Da=
+ily_Newsletter" class=3D"wrap" alt=3D"TWITTER" border=3D"0" style=3D"displa=
+y: block" width=3D"640" height=3D"auto"></a><!-- End TWITTER --></td>
+    </tr>
+    <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start INSTAGRAM --><a href=3D=
+"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/1404144861d=
+44cef0000021ef3a0bce8/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBK=
+TXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvX=
+MWoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E=
+6izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmr=
+qqbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV3hpTsA-REqJTrhCTXUBg2xjLDYr8=
+HI1P1BRK8O-UPIzZYqfYJPGr_sDaNZSV3xtXFXXbLMx1slxGpKga6qkTymEzsFh-LcJttpJMPvJ=
+Z1QM9s4Sj3RxCHG50bOAQ5YrQcRKK2PeZNfq1S5lZeQwup3L6QubLC1Z7xG_gYvlV9xvVE6gUMG=
+GtRRmvo7d6ZXJIhQ04QRejavI5o6MCH45PpTaD8UZHiPuKQjm698XO3VEKu6udRAz78k5sDJ3DB=
+dQi5itBusJw5iISj7xYaBoHfuGJAEuDexm_A0g6Gib_87O2zAbnpRWv8tDbZ4Fr9TSJ3XGKlAgN=
+L_u2mvmXF_-D_xeVzc_7C4jontHG14bM_lquMPmCTV0FncXT5iJvff8zrU80bAQAKLl2Pq2pF8S=
+jgL2yp2IYaKCfySaip1-6bXplVpPN7k6uBbZFnEdocSh30yA3L2s6U27mrGlJWmeyAH9PgkdNWD=
+pcFBnYm-6GNhktvWA4ehjT1qvBZFhwnyG5Rz9zaTKqF9boEmdyFrPEBr" target=3D"_blank"=
+><img src=3D"https://mi=2Enfl=2Ecom/p/rp/c8f9cd85026d4608=2Epng?mi_u=3Dd222=
+5b433129ef8b96e6864a5c724177db71bfd73fcd6ab71dde415608d83f35&mi_ecmp=3D1:1_=
+NFL_Daily_Newsletter&mi_latin=3D0" class=3D"wrap" alt=3D"INSTAGRAM" border=
+=3D"0" style=3D"display: block" width=3D"640" height=3D"auto"></a><!-- End =
+INSTAGRAM --></td>
+    </tr>
+                <tr>
+      <td align=3D"left" valign=3D"top"><!-- Start NFL SHOP --><a href=3D"=
+https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/1404144861d4=
+4cef0000021ef3a0bce9/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKT=
+Xg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXM=
+WoX_0k4eFf_MPpURHo3Z1jC63fm_4JVbKLH5AIXvrz-HKHTteUhFvVyEsiX5808Eh9TbktcQ4E6=
+izduGoF56h45Ie01fs-Dhdw_mxeQNwALGfQlu03_JAi3i6HMh50IgakrPQu9SwM5azDvLWZNmrq=
+qbxRIshpljNnGw-lEieZp4Xns_RjUALreTHlAhLBxZ9_DV21_VO5RDD-VHIQ1GwR1JFI2cZmPdm=
+4YtR9XHyvhWGzDw0ucZqVYbOvdDgr4izKY6de79VpRWnNWEbJszKFDEZHRRp7iopX_KjNOoAY5W=
+NM2cd8Jm5yUl6RpknW107Rb3opiUNLiVDn9Ro4CWsiVY5GK62egPLDnLLe1tNnCrj1HLbuMdHxo=
+npphosCzDvpU_DImCE_1JwGJMr_Wupyec2b36dO8mVOUkkakLM-WjT6-xUBitVDvO2hBifSgVdj=
+O_9hq3DFtXeQscMp-kUDVGIqonebBH-vaehfLron8eG-i4qwB3zlwFB3b1pHcE_q-qKqlIy7Ayc=
+lE03upCX3VVF4var5ccEHpftKiG32QrZVMT6pLoTbochHmI7waLDPeoKbMMm7hv4ZPoGoXrpJDB=
+4ApglwCUhPnAxKwssH9IYmMsIpYGzBrtcvCY9WGrPZF84Xy5tmHgjMfpU1d6qHzo0FfLyfS2HCV=
+SMorv5GT5C8q033PNj3Nc1_VH6Io0XoMus8whCpPOrU80fa-sthg6vyOLAP0H0Ts6wD0DtuTX5n=
+Uvhv5CidW8XRJwBZwTv3tP4fc_53mYXeRw=3D=3D" target=3D"_blank"><img src=3D"htt=
+ps://mi=2Enfl=2Ecom/p/rp/b89fe9d39754a6f9=2Epng?mi_u=3Dd2225b433129ef8b96e6=
+864a5c724177db71bfd73fcd6ab71dde415608d83f35&mi_ecmp=3D1:1_NFL_Daily_Newsle=
+tter&mi_fav_team=3D&mi_favteam=3D" class=3D"wrap" alt=3D"NFL SHOP" border=
+=3D"0" style=3D"display: block" width=3D"640" height=3D"auto"></a><!-- End =
+NFL SHOP --></td>
+    </tr>   =20
+  </tbody>
+</table>
+</td></tr></tbody></table></td></tr><tr><td><table role=3D"presentation" b=
+gcolor=3D"#CCCCCC" width=3D"640" border=3D"0" align=3D"center" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"wrap"><tbody><tr><td align=3D"center" sty=
+le=3D"font-size:14px"><table role=3D"presentation" width=3D"100%" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr>
+      <td><!-- start COPYRIGHT -->
+        <table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cell=
+padding=3D"0" border=3D"0" align=3D"center">
+          <tbody>
+            <tr>=20
+             =20
+              <td class=3D"bgAdjust" style=3D"background-position: top cen=
+ter; background-repeat: no-repeat" width=3D"100%" valign=3D"top" bgcolor=3D=
+"#006a9c" background=3D"http://images=2Eharmony=2Eepsilon=2Ecom/ContentHand=
+ler/images?id=3De7b84c00-285c-11ec-8fce-f13c046d13ed" align=3D"center"><!--=
+[if gte mso 9]><v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"tr=
+ue" stroke=3D"false" style=3D"width:640px; height: 35px; background-positio=
+n: top center; background-repeat: no-repeat;">
+<v:fill type=3D"frame" src=3D"http://images=2Eharmony=2Eepsilon=2Ecom/Cont=
+entHandler/images?id=3De7b84c00-285c-11ec-8fce-f13c046d13ed" color=3D"#006a=
+9c"/> <v:textbox inset=3D"0,0,0,0"></v:background><![endif]-->
+               =20
+                <div style=3D"font-size: 0">
+                  <table role=3D"presentation" class=3D"wrap" width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center">
+                    <tbody>
+                      <tr>
+						  <td style=3D"padding: 10px 20px 10px 20px" class=3D"pad20rl" align=
+=3D"center"><p style=3D"font-size: 10px; mso-line-height-rule: exactly;  li=
+ne-height: 150%; margin: 0px; font-weight: normal; letter-spacing: =2E2px; =
+text-transform: none; color: #FFFFFF; font-family: 'All-ProSans--regular', =
+Helvetica, sans-serif">&copy;2025&nbsp;<a style=3D"color: #ffffff; text-dec=
+oration: none;" href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f=
+56e96c65848/1404144861d44cef0000021ef3a0bcea/14041448-61d4-4cef-8138-e2ec75=
+84f57e?__dU__=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh=
+3tviDHXIoXcPxvDgUUCCPvXMWoX_3eaFHlkq5FQxFyxLi330X1yvIdWenmna2AOo99khuu3382k=
+vld5Q7eIL6fAfiNNbFlR13sfarSKNMaXQKiNYUrfveGeyjDlKGCCoOwcYN2lstbO0p0IuS3Sk4U=
+WdZH9F_KItcKmMhEy2P_XLne2ESwZnRZtBQYdvSVxZ4VOkV-pSBcNZc8T1SYH2NwYHmYCHk0DHJ=
+UiaRgthuEQSk14Nhrd14vcsDV_192XLh0KsMXoCMD9UxWRwzEc8SxsSoggTK_dLT-rsX2_lr31b=
+DVo-5NAuOtFUw1UuXFrL2IwH7Ev7vEA77X_lGvfNjfU7gn2BM31LV0s1Dx_TVl9f2erFyvQGeiE=
+Zj3pvhjDQS4Uz1SjuJmpo0IBREo4pQqAVE4Glo5IQlExjnWj0dnxSC_8_a6_23OpKcF4GWMWQ_w=
+RNPEBBM98wfUKHeyI4K8Uc8395MaMiJk-Et9vw=3D=3D" target=3D"_blank">NFL=2ECOM</=
+a> &nbsp;<span style=3D"color: #000000">|</span>&nbsp; ALL RIGHTS RESERVED =
+&nbsp;<span style=3D"color: #000000">|</span>&nbsp; NFL&nbsp;ENTERPRISES&nb=
+sp;LLC, 345&nbsp;PARK&nbsp;AVENUE, NEW&nbsp;YORK,&nbsp;NY 10154</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               =20
+                <!--[if gte mso 9]></v:textbox></v:rect><![endif]--></td>
+             =20
+            </tr>
+          </tbody>
+        </table>
+        <!-- end COPYRIGHT --></td>
+    </tr>
+    <tr>
+      <td bgcolor=3D"#CCCCCC"><!-- start FOOTER LINKS -->
+        <table role=3D"presentation" class=3D"wrap" width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0">
+          <tbody>
+            <tr>
+              <td style=3D"padding: 15px 20px 15px 20px" class=3D"pad20rl"=
+ align=3D"center"><p style=3D"font-size: 12px; mso-line-height-rule: exactl=
+y; line-height: 150%; margin: 0px; font-weight: normal; letter-spacing: 0px=
+; text-transform: none; color: #000001; font-family: 'All-ProSans--regular'=
+, Helvetica, sans-serif"><a style=3D"color: #000001; text-decoration: none"=
+ href=3D"https://email=2Enfl=2Ecom/H/2/v60000019929d58f929ac2f56e96c65848/1=
+4041448-61d4-4cef-8138-e2ec7584f57e/HTML" target=3D"_blank">View&nbsp;in&nb=
+sp;Browser</a>&nbsp; |&nbsp; <a style=3D"color: #000001; text-decoration: n=
+one;" href=3D"https://email=2Enfl=2Ecom/U/v60000019929d58f929ac2f56e96c6584=
+8/1404144861d44cef0000021ef3a0bceb?__F__=3Dv0WFN7gAcoYoqCsLr_-lNFmiBwQ_3fK-=
+VbvJa1STo4yFs1NgWiv4EcyO-LbE0Jilj2dstIdSmPkk_A2CyJZrniqPukE7kZA_5SBh0-8_xbS=
+pIk7p8NrjVckpb3hs--0-BlBipJcba0Xr4LI1F9neVtoMzxoltjQCYEsn3otw34XW-uvJpzvFox=
+MiG9Jj3t2O6zGPVS40g8ZyD0qsBHicpcLponUE4KMzMzv7w5o1SmvSGuvJpzvFoxMnuhxW7Kt5j=
+QElfQUUZ6tkN2W1-GSYuvxv4d2DqQ7JBCWU2-DhU2JDTBqzyEKmLo-iBY0R4kBw-aHBcieHFYC_=
+TfBvnrgvPw_mUxMgLbdEtX2qbZPWiVEw23ONNaJU7osPLpS0DWv2aJ8SQaDS1HuvSJXtCx0Ai3Q=
+XbCDg8lfLrB6uIlU8xlkSK7MNbF22miJ_tt33ACvT-H45ofYoyCQzT27qm4cckJFUF1s1tTmVrC=
+-71qbITMGuXHM3WynwWrX6DGUdo5DT3xaI03zCF4ZCE=3D" target=3D"_blank" >Unsubscr=
+ibe</a>&nbsp;|&nbsp; <a style=3D"color: #000001; text-decoration: none" hre=
+f=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/1404144=
+861d44cef0000021ef3a0bcec/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G=
+4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUC=
+CPvXMWoX_0JoZLAZABQF-4OeU5Yt0eCwBUUbMPkiL0-bz1BHDMctSutnoDyw5yy3tbTZwq49Ry2=
+7jHR8aJ6aYaLAsw76VPwyJghP9ScBiTK_1rqcnnNm9-nTvJlTlJJYd94Bclm6rjGKq-RMonZa_u=
+kE7kZA_5SBh0-8_xbSpIk7p8NrjVckvhZ4Lz0x-Hy_LtEOJJfw0dXKC7V1__keKSHRJVQTGBOAs=
+Je0COpIthmUWvSQWnlV631r0GVLCt9U3ZL1uJ-oKrJmHmPMB4fhsWfJux5u59PD-CU03CjwF2Kc=
+ql1xxFUTMz4b6DDlHEAvurcEd2VHvhtjFrOUu-3X0uYegrUXggcwzNYBYZ_b9tcybswv0qmdFDb=
+2GN92ghDAlySXq0IU9U6ZaylnvOK3R7FWg_afvbzZb26tc-5uk_kiolOQpKflW8JphWkNHZtNx7=
+cA0qytUc5mamcIVETpUqLZfToD7a7RadAeXRimMs=3D" target=3D"_blank">Privacy&nbsp=
+;Policy</a> &nbsp;|&nbsp; <a style=3D"color: #000001; text-decoration: none=
+" href=3D"https://email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/14=
+04144861d44cef0000021ef3a0bced/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=
+=3Dv0G4RBKTXg2GskxO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPx=
+vDgUUCCPvXMWoX_3g3dRD1DWLuITdfp7GnZxPSYTKl3-O7zjpN_gND_J-9ZqsNeAP6e3GVs0YeC=
+5IH4E2JrG_t1qS3kJUghPR1yfyL-oIF4PSDDR3OLpZz3-Bk84GtzVghsIV_R7_pt7Loh3PsJ053=
+hLzc1DThBF6Nq8jmjowIfjk-lNoPxRkeI-4pCObr3xc7dUQq7q51EDPvyTmwMncMF1CLmK0G6wn=
+DmIhKPvFhoGgd-4YkAS4N7Gb8DSDoaJv_zs7bMBuelFa_y0NtngWv1NIndcYqUCA0v-7aa-ZcX_=
+4P_F5XNz_sLiOie0cbXhsz-Wq4w-YJNXQWdxdPmIm99_zOtTzRsBAAouXY-rakXxKOAvbKnYhho=
+oJ_JJqKnX7ptemVWk83uTq4FtkWcR2hxKHfTIDcvazpTbuasaUlaZ7IAebzjozyGWcdAo0umoU4=
+_dfqrStt4Oi9ffwyuaDohOkHn3wL756cTzCgSZ3IWs8QGs=3D" target=3D"_blank">Contac=
+t&nbsp;Us</a></p></td>
+            </tr>
+            <tr>
+              <td style=3D"padding: 15px 20px 15px 20px" class=3D"pad20rl"=
+ align=3D"center" bgcolor=3D"#CCCCCC"><p style=3D"font-size: 12px; mso-line=
+-height-rule: exactly; line-height: 150%; margin: 0px; font-weight: normal;=
+ letter-spacing: 0px; text-transform: none; color: #000001; font-family: 'A=
+ll-ProSans--regular', Helvetica, sans-serif">Subscription required for NFL+=
+=2E <a style=3D"color: #000001; text-decoration: underline;" href=3D"https:=
+//email=2Enfl=2Ecom/T/v60000019929d58f929ac2f56e96c65848/1404144861d44cef00=
+00021ef3a0bcee/14041448-61d4-4cef-8138-e2ec7584f57e?__dU__=3Dv0G4RBKTXg2Gsk=
+xO4o8b69ZaaP0r8AhGa-&__F__=3Dv0fUYvjHMDjRPMSh3tviDHXIoXcPxvDgUUCCPvXMWoX_0J=
+oZLAZABQF-4OeU5Yt0eC33pY1BnwF-mPfUGYgU9YWsguoKxJBKD6b4ZizPF_KVuuvJpzvFoxMiG=
+9Jj3t2O6zGPVS40g8ZyD0qsBHicpcLponUE4KMzMzCExgMj9JtO3VKVwhDkViIlh0yOozTSfs4k=
+SAH2PaSut2wg4PJXy6weriJVPMZZEiuzDWxdtpoic2w8E3bc__EmUobjXfEI5MUeWQLrAyEztnG=
+N6G1KCKbRJpjArRUkGd5jvPMhRhzCwjejRnG3Ol0CuP1aP1MpO6BiiBroMDLIYQuPvBnZcbylL1=
+jRSZFJVM7B5-ZzCakvPLsn2ckDxxqbS5u7q-srlvEt13k1ybSJ1jacOVs48DK5jRiUNKSYTW3Tl=
+9xln8lKqx9h_0F0IJ1ehlYbUKxGFj9dlfPkfTfAWeLf7I6TFHoPyKh-UdeD07EP_QMElunT0Pds=
+r99UAG-cUG5C4Pp6-0RF6aM96LZo7WtU1B7Cua5A=3D=3D" target=3D"_blank">Terms and=
+ Conditions</a> Apply=2E Visit Plus=2ENFL=2Ecom=2E
+</p></td>
+                        </tr>
+             =20
+  </tbody>
+</table></td></tr></tbody></table></td></tr></tbody></table>
+
+							<!--END Email Size Wrapper Table -->
+
+                        </td>
+                    </tr>
+                </table>
+
+                <!--END Email Background Color Table -->
+
+            </td>
+        </tr>
+	</table>
+    </div>
+	<!--END Page Overflow Color Table -->
+
+   =20
+</body>
+</html>
+---=Part.31f19b3.4fd2fc3110e3be2d.19929d5908e.fb000a8459840c2=---
+

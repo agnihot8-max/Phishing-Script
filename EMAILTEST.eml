@@ -1,0 +1,24 @@
+Return-Path: <scammer@baddomain.net>
+Authentication-Results: mta.example.com; spf=fail smtp.mailfrom=scammer@baddomain.net; dkim=fail header.d=yourbank.com
+From: "Your Bank Security" <security@yourbank.com>
+To: "Valued Customer" <customer@example.com>
+Subject: Urgent: Your Account Will Be Suspended
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Account Notification</title>
+</head>
+<body>
+<p>Dear Valued Customer,</p>
+<p>We have detected suspicious activity on your account. For your protection, your online access will be suspended unless you verify your identity immediately. Failure to update your password and security details will result in permanent account closure.</p>
+<p>Please click the link below to restore your account access:</p>
+<p><a href="http://secure-login-portal.net/update">https://yourbank.com/security-update</a></p>
+<p>If the link above does not work, please use this alternative connection to verify your information:</p>
+<p><a href="http://198.51.100.45/login">Click here</a> to login.</p>
+<p>This is an urgent security notification. Your immediate action is required.</p>
+<p>Thank you,<br>
+Your Bank Security Team</p>
+</body>
+</html>
